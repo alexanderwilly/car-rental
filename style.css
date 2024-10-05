@@ -67,8 +67,6 @@ section{
     min-height: 100vh;
     display: flex;
     color: black;
-    justify-content: center;
-    align-items: center;
 }
 
 .home{
@@ -127,22 +125,201 @@ section{
 }
 
 
+
+/* About */
 .about{
     flex-direction: column; 
     justify-content: flex-start;   
-
+    align-items: center;
+    gap: 2.5rem;
 }
 
-.about h1{
-    font-size: 4rem;
+.about-us{
+    width: 75%;
+}
+
+.about-us h1{
+    font-size: 3rem;
     font-weight: 700;
+    margin-bottom: 1rem;
+    color: #c2272d;
+    text-align: center;
+}
+
+.about h3{
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: #c2272d;
 }
 
-.about p{
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
+
+.why-us{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+.why-us h3, .our-fleet h3{
     width: 75%;
 }
+
+.why-us ul{
+    background-color: #f6f6f6;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+    
+}
+
+.why-us li{
+    width: 200px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.why-us li>h4{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #c2272d;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.why-us li>p{
+    font-size: 0.85rem;
+    color: black;
+}
+
+.why-us li > img{
+    width: 50px;
+    height: 50px;
+}
+
+.our-fleet{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 8rem;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+  
+.carousel-wrapper {
+    display: flex;
+    width: max-content;
+    animation: slide-left 15s linear infinite;
+}
+  
+.carousel-item {
+    min-width: 150px;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+  
+.carousel-item img {
+    height: 100px;
+}
+  
+@keyframes slide-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+  
+
+/* FAQ */
+.faq{
+    flex-direction: column; 
+    justify-content: flex-start;   
+    align-items: center;
+    padding-bottom: 8vh;
+}
+
+.faq h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #c2272d;
+    text-align: center;
+}
+
+.questions{
+    max-width: 700px;
+    margin-top: 2rem;
+    padding-bottom: 2px;
+    border-bottom: 2px solid #c2272d;
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.question img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.question h3{
+    font-size: 1.5rem;
+}
+
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s ease;
+}
+
+.answer p{
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.questions.active .answer{
+    max-height: 1000px;
+}
+
+.questions.active img{
+    transform: rotate(-180deg);
+}
+
+.question > img{
+    transition: all 0.3s ease;
+}
+
+.question h3{
+    font-size: 1.5rem;
+    color: #c2272d;
+}
+
+.answer p{
+    font-size: 1rem;
+    color: black;
+}
+
+
