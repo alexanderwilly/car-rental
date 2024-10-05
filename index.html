@@ -3,25 +3,67 @@
     <head>
         <meta charset = "UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href = "img/az_icon.png" type = "image/x-icon">
+        <link rel="icon" type="image/x-icon" href="img/az_icon.png">
         <link rel="stylesheet" href = "style.css" type = "text/css">
-        <title>Home | AZ Car Rental</title>
+        <title>AZ Car Rental</title>
     </head>
     <body>
-        <nav>
+        <nav class="navbar">
             <img src = "img/az_icon.png" alt = "AZ Car Rental">
             <ul>
-                <li><a href = "#">HOME</a></li>
-                <li><a href = "#">ABOUT</a></li>
+                <li><a href = "#home">HOME</a></li>
+                <li><a href = "#about">ABOUT</a></li>
+                <li><a href = "#faq">FAQ</a></li>
+                <li><a href = "#contact">CONTACT US</a></li>
                 <li>
-                    <select name = "login" id = "login">
-                        <option value = "none">LOGIN</option>
-                        <option value = "cust">Customer</option>
-                        <option value = "emp"></option>
-                    </select>
+                    <button class = "btn">LOGIN</button>
                 </li>
             </ul>
         </nav>
+        <main>
+            <section id = "home" class = "home">
+                <div>
+                    <span>Your Journey Starts Here:</span>
+                    <h1>Choose Your Ride Now!</h1>
+                    <p>
+                        Discover a world of convenient and affordable car rentals 
+                        tailored to your needs with AZ Car Rental!
+                    </p>
+                    <a>
+                        Rent Now
+                    </a>
+                </div>
+                <img src = "img/home_car.png" alt = "home_image">
+            </section>
+            
+            <section id = "about" class = "about">
+                
+                <p>
+                    Experience the best car rental service in the country with AZ Car Rental. 
+                    We offer a wide range of cars to choose from, with the best prices in the market. Our cars are well maintained and serviced regularly to ensure that you have a smooth and comfortable ride. 
+                    Whether you need a car for a day, a week, or a month, we have the perfect car for you. 
+                    Book your car today and enjoy the freedom of the open road with AZ Car Rental.
+                </p>
+            </section>
+
+            <section id = "faq" class = "faq"></section>
+                <h1>FAQ</h1>
+            </section>
+
+            <section id = "contact" class = "contact">
+                <h1>CONTACT US</h1>
+                <form action = "contact.php" method = "post">
+                    <label for = "name">Name:</label>
+                    <input type = "text" id = "name" name = "name" required>
+                    <label for = "email">Email:</label>
+                    <input type = "email" id = "email" name = "email" required>
+                    <label for = "message">Message:</label>
+                    <textarea id = "message" name = "message" required></textarea>
+                    <button type = "submit" class = "btn">SEND</button>
+                </form>
+            </section>
+            
+        </main>
 
     </body>
 </html>
