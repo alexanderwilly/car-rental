@@ -89,8 +89,21 @@
     justify-content: center;
     gap: 3rem;
     list-style: none;
+    animation: slide-down 0.5s ease;
 }
 
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.sidebar-link a:hover{
+    color: black;
+}
 
 .sidebar-link a{
     color: white;
@@ -176,109 +189,6 @@ section{
     background-color: #c2272d;
     color: white;
 }
-
-
-@media (max-width: 1024px){
-    .top-nav-link{
-        display: none;
-    }
-
-    .bars-icon{
-        display: flex;
-    }
-
-    .home{
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        padding-top: 5vh;
-        padding-bottom: 5vh;
-    }
-    
-    .home div{
-        text-align: center;
-        align-items: center;
-        padding-left: 0;
-        width: 100%;   
-    }
-
-    .home a{
-        width: 225px;
-        font-size: 1.5rem;
-        
-        margin-bottom: 5vh;
-    }
-
-    .home img{
-        width: 75%;
-    }
-
-    
-    .home p{
-        font-size: 1.35em;
-    }
-    
-    .home span{
-        font-size: 1.5rem;
-    }
-
-}
-
-@media (max-width:540px){
-
-    .home{
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-
-    .home h1{
-        font-size: 1.8rem;
-    }
-    
-    .home p{
-        font-size: 1em;
-    }
-    
-    .home span{
-        font-size: 1.25rem;
-    }
-
-    .home a{
-        width: 125px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 420px){
-
-    .sidebar-link a{
-        font-size: 1.5rem;
-    }
-
-    .home div{
-        width: 90%;
-        padding-left: 0;
-    }
-
-
-    .home h1{
-        font-size: 1.75rem;
-    }
-    
-    .home p{
-        font-size: 0.75em;
-        margin-bottom: 2.5vh;
-    }
-    
-    .home span{
-        font-size: 1rem;
-    }
-    
-
-}
-
-
 
 
 /* About */
@@ -452,6 +362,7 @@ section{
     padding-bottom: 0.5rem;
     line-height: 1.6;
     font-size: 1.4rem;
+    width: 90%;
 }
 
 .questions.active .answer{
@@ -478,10 +389,11 @@ section{
 
 /* Location */
 .our-location{
-    flex-direction: column; 
-    justify-content: center;   
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     padding-bottom: 8vh;
+    align-items: center;
+    width: 100%;
 }
 
 .our-location h1{
@@ -496,8 +408,8 @@ section{
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 2rem;
     padding-top: 2rem;
     background-color: #f6f6f6;
@@ -506,6 +418,7 @@ section{
 
 .region{
     width: 25%;
+    
 }
 
 .region > h2{
@@ -590,6 +503,132 @@ section{
 .contact button:active{
     transform: scale(0.95);
 }
+
+@media (max-width: 1024px){
+    .top-nav-link{
+        display: none;
+    }
+
+    .bars-icon{
+        display: flex;
+    }
+
+    .home{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+    
+    .home div{
+        text-align: center;
+        align-items: center;
+        padding-left: 0;
+        width: 100%;   
+    }
+
+    .home a{
+        width: 225px;
+        font-size: 1.5rem;
+        
+        margin-bottom: 5vh;
+    }
+
+    .home img{
+        width: 75%;
+    }
+
+    
+    .home p{
+        font-size: 1.35em;
+    }
+    
+    .home span{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width:540px){
+
+    .home{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .home h1{
+        font-size: 1.8rem;
+    }
+    
+    .home p{
+        font-size: 1em;
+    }
+    
+    .home span{
+        font-size: 1.25rem;
+    }
+
+    .home a{
+        width: 125px;
+        font-size: 1rem;
+    }
+
+    .questions{
+        max-width: 90%;
+    }
+
+    .question h3{
+        font-size: 1.1rem;
+    }
+
+    .answer p{
+        font-size: 0.75rem;
+    }
+
+    .region > h2{
+        font-size: 1.25rem;
+    }
+
+    .location > h3{
+        font-size: 0.85rem;
+    }
+
+    .location > p{
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 420px){
+
+    .sidebar-link a{
+        font-size: 1.5rem;
+    }
+
+    .home div{
+        width: 90%;
+        padding-left: 0;
+    }
+
+
+    .home h1{
+        font-size: 1.75rem;
+    }
+    
+    .home p{
+        font-size: 0.75em;
+        margin-bottom: 2.5vh;
+    }
+    
+    .home span{
+        font-size: 1rem;
+    }
+
+    
+
+}
+
 
 
 
