@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta viewport="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href ="login.css">
+        <link rel = "icon" href = "../img/az_icon.png" type = "image/x-icon">
+        <title>Login</title>
+    </head>
+
+    <body>
+        
+        <main>
+            <header>
+                <h1>Login</h1>
+            </header>
+
+            <section class="container">
+                <form method="post">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" required>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required>
+
+                    <div>
+                        <a href ="">
+                            Forgot password?
+                        </a>
+
+                        <a  href ="">
+                            Register
+                        </a>
+                    </div>
+
+                    <span id = "error-msg"></span>
+                    <button id = "submit-btn" type="button">Login</button>
+                </form>
+                
+            </section>
+        </main>
+
+        <script src="login.js"></script>
+    </body>
+</html>

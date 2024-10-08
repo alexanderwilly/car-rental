@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+body{
+    background: #f6f6f6;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    border : 1px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 512px;
+    gap: 16px;
+    padding-top: 16px;
+    padding-bottom: 52px;
+}
+
+header > h1{
+    color: #c2272d;
+    text-align: center;
+}
+
+
+.container > form{
+    display : flex;
+    flex-direction: column;
+    margin-left: 24px;
+    margin-right: 24px;
+
+}
+
+.container > form > label{
+    color: #c2272d;
+    font-size: 16px;
+    margin-bottom: 4px;
+    margin-top: 16px;
+}
+
+.container > form > input{
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid black;
+    
+}
+
+.container > form > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 38px;
+}
+
+.container > form > div > a{
+    color: #c2272d;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.container > form > button{
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    background-color: #c2272d;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#error-msg{
+    color: red;
+    text-align: center;
+    
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
