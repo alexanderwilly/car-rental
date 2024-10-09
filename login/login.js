@@ -1,25 +1,40 @@
 
 class User{
-    __fullName;
-    __email;
-    __password;
-    constructor(fullname, email, password){
-        this.__fullName = fullname;
-        this.__email = email;
-        this.__password = password;
+    _fullName;
+    _email;
+    _phone;
+    _password;
+    constructor(fullname, email, phone, password){
+        this._fullName = fullname;
+        this._email = email;
+        this._phone = phone;
+        this._password = password;
     }
 
-    getFullName(){return this.__fullName;}
-    getEmail(){return this.__email;}
-    getPassword(){return this.__password;}
+    getFullName(){return this._fullName;}
+    getEmail(){return this._email;}
+    getPhone(){return this._phone;}
+    getPassword(){return this._password;}
 
-    setFullName(fullname){this.__fullName = fullname;}
-    setEmail(email){this.__email = email;}
-    setPassword(password){this.__password = password;}
+    setFullName(fullname){this._fullName = fullname;}
+    setEmail(email){this._email = email;}
+    setPhone(phone){this._phone = phone;}
+    setPassword(password){this._password = password;}
 }
 
 class Staff extends User{}
-class Customer extends User{}
+
+class Customer extends User{
+    __card;
+
+    constructor(fullname, email, phone, password, card){
+        super(fullname, email, phone, password);
+        this.__card = card;
+    }
+
+    getCard(){return this.__card;}
+    setCard(card){this.__card = card;}
+}
 
 
 
@@ -69,7 +84,7 @@ async function validateLogin(){
                 if (u instanceof Staff){
                     // window.location.href = "../staff/staff.html";
                 } else if (u instanceof Customer){
-                    // window.location.href = "../customer/customer.html";
+                    window.location.href = "../customer/customer.html";
                 }
                 return;
             } else {
@@ -90,8 +105,8 @@ async function validateLogin(){
 // This data is purposely hard coded for this assignment. 
 // In a real world scenario, this data would be stored in a database and retrieved from there.
 let users = [
-    new Staff ("John Doe", "staff1@gmail.com", "2f005e42a17da46ec51ba6f11d725e60788931a1dadd33d9cb85084fb32bb166"),
-    new Customer ("Jamie Lie", "customer1@gmail.com", "2cbf58e520216e4ea5caa705a9b3667e371af90c9ad4637f6d90b1189ff5e138")
+    new Staff ("John Doe", "staff1@gmail.com", "+65 8123 4567", "2f005e42a17da46ec51ba6f11d725e60788931a1dadd33d9cb85084fb32bb166"),
+    new Customer ("Jamie Lie", "customer1@gmail.com", "+65 8987 6543", "2cbf58e520216e4ea5caa705a9b3667e371af90c9ad4637f6d90b1189ff5e138", "VISA-9876")
 ]
 
 

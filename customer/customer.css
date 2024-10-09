@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+body{
+    background: #f6f6f6;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background-color: #c2272d;
+    color: white;
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+header > img{
+    width: 100px;
+    height: 100%;
+}
+
+header > button{
+    background-color: white;
+    color: #c2272d;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+main {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+section{
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px 32px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+
+section > h1{
+    color: #c2272d;
+    font-size: 2rem;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.profile > div{
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+
+
+
+.profile > div > img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f6f6f6;
+    border: 2px solid gray;
+    padding: 8px;
+}
+
+.profile > div h2{
+    color: #c2272d;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.profile > div h6{
+    font-size: 1rem;
+    font-weight: 300;
+}
