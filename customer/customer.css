@@ -40,56 +40,55 @@ header > button{
 }
 
 main {
-    padding: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 64px;
+}
+
+aside{
+    width: 256px;
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+aside > button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+    background-color: white;
+    border: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor:pointer;
+}
+
+aside > button:hover{
+    background-color: #f6f6f6;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+aside > button > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+aside > button > span{
+    font-size: 18px;
+    font-weight: bold;
 }
 
 section{
-    background-color: white;
-    border-radius: 16px;
-    padding: 16px 32px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
-}
-
-
-section > h1{
-    color: #c2272d;
-    font-size: 2rem;
-}
-
-.profile{
+    width: 640px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-}
-
-.profile > div{
-    display: flex;
-    flex-direction: row;
-    gap: 48px;
-}
-
-
-
-.profile > div > img{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #f6f6f6;
-    border: 2px solid gray;
-    padding: 8px;
-}
-
-.profile > div h2{
-    color: #c2272d;
-    font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 8px;
-}
-
-.profile > div h6{
-    font-size: 1rem;
-    font-weight: 300;
-}
+    gap: 32px;
+}   

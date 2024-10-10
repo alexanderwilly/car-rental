@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta viewport="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="customer.css" />
+    <link rel="stylesheet" href="account.css" />
+    <link rel="icon" href="../img/az_icon.png" type="image/x-icon" />
+    <title>Customer Home | AZ Car Rental</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="../img/az_icon.png" alt="AZ Car Rental" />
+      <button id="logout-btn">Logout</button>
+    </header>
+
+    <main>
+
+        <aside>
+          <button>
+            <img src="../img/account_icon.png" alt="acc_icon" />
+            <span>Account</span>
+          </button>
+          <button>
+            <img src="../img/reservation_icon.png" alt="res_icon" />
+            <span>Reservation</span>
+          </button>
+          <button>
+            <img src="../img/booking_icon.png" alt="book_icon" />
+            <span>Booking</span>
+          </button>
+          <button>
+            <img src="../img/history_icon.png" alt="hist_icon" />
+            <span>History</span>
+          </button>
+        </aside>
+
+
+        <section>
+          <div class = 'account-header'>
+            <div>
+              <img src="../img/default_user.png" alt="user_icon" />
+              <div>
+                <h1>Jamie Lie</h1>
+                <h6>customer1@gmail.com</h6>
+                <h6>+65 8987 6543</h6>
+              </div>
+            </div>
+            <button id="edit-btn">Edit</button>
+          </div>
+
+
+          <div class = "account-details">
+            <h2>Account Information</h2>
+            <table>
+              <tr>
+                <td>
+                  <h6>Date of Birth</h6>
+                  <span>01/01/1990</span>
+                </td>
+                <td>
+                  <h6>Driving License Number</h6>
+                  <span>*****666F</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h6>Address</h6>
+                  <span>123 Lorong Chuan,<br/>Singapore, Singapore 123456</span>
+                </td>
+                <td>
+                  <h6>Driving License Status</h6>
+                  <span>Valid</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h6>Card Number</h6>
+                  <span>VISA-9876</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
+    </main>
+
+    <script src="account.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta viewport="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="edit_account.css" />
+        <link rel = "icon" href = "../img/az_icon.png" type = "image/x-icon">
+        <title>Edit Account</title>
+    </head>
+    <body>
+        <header>
+          <img src="../img/az_icon.png" alt="AZ Car Rental" />
+          <button id="back-btn">
+            Discard Changes
+          </button>
+        </header>
+
+        <main>
+            <section>
+                <form method="POST">
+                    <h3>Update User Information</h3>
+                    <label for = "fullname">Full Name *</label>
+                    <input type="text" id = "fullname" name = "fullname" value = "Jamie Lie" maxlength="64" required>
+                    <label for = "dob">Date of Birth *</label>
+                    <input type="date" id = "dob" name = "dob" value = "1990-01-01" required>
+                    <label for = "address1">Address Line 1 *</label>
+                    <input type="text" id = "address1" name = "address1" maxlength="64" value = "123 Lorong Chuan" required>
+                    <label for = "address2">Address Line 2</label>
+                    <input type="text" id = "address2" name = "address2" maxlength="64" value = "">
+                    <label for = "city">City *</label>
+                    <input type="text" id = "city" name = "city" value = "Singapore" maxlength="64" required>
+                    <label for = "country">Country *</label>
+                    <input type="text" id = "country" name = "country" value = "Singapore" maxlength="64" required>
+                    <label for = "postal">Postal Code *</label>
+                    <input type="text" id = "postal" name = "postal" value = "123456" maxlength="6" required>
+
+                    <span class = "guide-text" id = "update-user-guide">
+                        Update your information here!
+                    </span>
+
+                    <button type="button" id ="save-user-info">Save Changes</button>
+                </form>
+
+                <form method="POST">
+                    <h3>Update Phone Number</h3>
+
+                    <label for = "phone">Phone Number *</label>
+                    <input type = "text" id = "phone" name = "phone" value = "+6589876543" placeholder="+Country Code XXXX XXXX ..." maxlength="36" disabled required>
+                    <label for = "otp-phone">OTP *</label>
+                    <div>
+                        <input type = "text" id = "otp-phone" name = "otp-phone" maxlength="6" required>
+                        <button type="button" class = "otp-btn" id ="send-otp-phone">Send OTP</button>
+                        <button type="button" class = "otp-btn" id ="verify-otp-phone" disabled>Verify OTP</button>
+                    </div>
+
+                    <span class = "guide-text" id = "update-phone-guide">
+                        Verify your phone number to update,<br/>send OTP to your phone number first!
+                    </span>
+
+                    <button type="button" id ="save-phone">Save Changes</button>
+                </form>
+
+                <form method="POST">
+                    <h3>Update Email</h3>
+                    <label for = "email">Email *</label>
+                    <input type = "email" id = "email" name = "email" value = "customer1@gmail.com" maxlength="64" disabled required>
+                    <label for = "otp-email">OTP *</label>
+                    <div>
+                        <input type = "text" id = "otp-email" name = "otp-email" maxlength="6" required>
+                        <button type="button" class = "otp-btn" id ="send-otp-email">Send OTP</button>
+                        <button type="button" class = "otp-btn" id ="verify-otp-email" disabled>Verify OTP</button>
+                    </div>
+
+                    <span class = "guide-text" id = "update-email-guide">
+                        Verify your email to update,<br/>send OTP to your email first!
+                    </span>
+
+                    <button type="button" id ="save-email">Save Changes</button>
+
+
+                </form>
+
+                <form method="POST">
+                    <h3>Update Password</h3>
+                    <label for = "password">Password *</label>
+                    <input type = "password" id = "password" name = "password" minlength="8" required>
+                    <label for = "confirm-password">Confirm Password *</label>
+                    <input type = "password" id = "confirm-password" name = "confirm-password" minlength="8" required>
+
+                    <label for = "otp-password">OTP *</label>
+                    <div>
+                        <input type = "text" id = "otp-password" name = "otp-password" maxlength="6" required>
+                        <button type="button" class = "otp-btn" id ="send-otp-password">Send OTP</button>
+                        <button type="button" class = "otp-btn" id ="verify-otp-password" disabled>Verify OTP</button>
+                    </div>
+
+                    <span class = "guide-text" id = "update-password-guide">
+                        Update your password here,<br/>
+                        verify OTP sent to your email first!
+                    </span>
+
+                    <button type="button" id ="save-password">Save Changes</button>
+                </form>
+
+                <form method="POST">
+                    <h3>Update Driving License</h3>
+                    <label for = "license">License Number *</label>
+                    <input type = "text" id = "license" name = "license" value = "">
+                    <label for = "license-pic">Upload Driving License (only .jpg, .jpeg, and .png) *</label>
+                    <input type = "file" id = "license-pic" name = "license-pic" accept="image/*">
+
+                    <span class = "guide-text" id = "update-license-guide">
+                        Update your driving license here, <br/>
+                        your license will be verified by our staff after you make a reservation.
+                    </span>
+
+                    <button type="button" id ="save-license">Save Changes</button>
+                </form>
+
+                <form method="POST">
+                    <h3>Update Payment Information</h3>
+                    <label for = "Card Number">Card Number</label>
+                    <input type = "text" id = "card-number" name = "card-number" value = "**** **** **** 9876" disabled>
+                    <label for = "expiry">Expiry Date</label>
+                    <input type = "month" id = "expiry" name = "expiry" value = "2026-01" required>
+                    <label for = "cvv">CVV/CVC</label>
+                    <input type = "password" id = "cvv" name = "cvv" value = "" maxlength="3" required>
+
+                    <span class = "guide-text" id = "update-payment-guide">
+                        Update your payment information here,<br/>
+                        If you want to change your card number, please visit our office.
+                    </span>
+
+                    <button type="button" id ="save-payment">Save Changes</button>
+                </form>
+            </section>
+            
+        </main>
+
+        <script src="edit_account.js"></script>
+    </body> 
+</html>

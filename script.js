@@ -18,20 +18,24 @@ const login = document.getElementById('login-btn');
 const bars = document.getElementById('bars-icon');
 
 
-close.addEventListener('click', () => {
+close.addEventListener('click', (e) => {
+    e.preventDefault();
     hideSidebar();
 });
 
-login.addEventListener('click', () => {
+login.addEventListener('click', (e) => {
+    e.preventDefault();
     redirectLogin();
 });
 
-bars.addEventListener('click', () => {
+bars.addEventListener('click', (e) => {
+    e.preventDefault();
     showSidebar();
 });
 
 faqs.forEach(faq => {
-    faq.addEventListener('click', () => {
+    faq.addEventListener('click', (e) => {
+        e.preventDefault();
         faq.classList.toggle('active');
     });
 });

@@ -66,9 +66,6 @@
     display: none;
 }
 
-.navbar button:active{
-    transform: scale(0.95);
-}
 
 .navbar a:hover{
     color: #c2272d;
@@ -181,14 +178,6 @@ section{
     transition: all 0.3s ease;
 }
 
-.home a:active{
-    transform: scale(0.95);
-}
-
-.home a:hover{
-    background-color: #c2272d;
-    color: white;
-}
 
 
 /* About */
@@ -500,9 +489,6 @@ section{
     transition: all 0.3s ease;
 }
 
-.contact button:active{
-    transform: scale(0.95);
-}
 
 @media (max-width: 1024px){
     .top-nav-link{

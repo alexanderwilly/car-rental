@@ -1,0 +1,65 @@
+.account-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
+.account-header > div{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.account-header > div > img{
+    width: 75px;
+    height: 75px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 4px;
+    border: 1px solid gray;
+}
+
+.account-header > div > div > h1{
+    font-size: 24px;
+    font-weight: bold;
+    color: #c2272d;
+}
+
+.account-header > div > div > h6{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#edit-btn{
+    background-color: #c2272d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    width: 96px;
+}
+
+.account-details{
+    background-color: #f2f2f2;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.account-details > h2{
+    font-weight: bold;
+    color: #c2272d;
+}
+
+.account-details td{
+    padding: 4px;
+}
