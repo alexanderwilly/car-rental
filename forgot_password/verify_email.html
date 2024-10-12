@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href = "verify_email.css">
+        <link rel = "icon" href = "../img/az_icon.png" type = "image/x-icon">
+        <title>Verify Email</title>
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <h1>Verify Email</h1>
+            </header>
+
+            <section class="container">
+                <form method="post">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" required>
+                    <label for="OTP">OTP</label>
+                    <div class = "otp">
+                        <input type="text" name="OTP" id="OTP" required maxlength="6" disabled>
+                        <button id = "send-otp-btn" type="button">Send OTP</button>
+                    </div>
+                    
+
+                    <span id = "error-msg"></span>
+                    <button id = "next-btn" type="button">Next</button>
+                </form>
+                
+            </section>
+        </main>
+        
+        <script src="verify_email.js"></script>
+    </body>
+</html>

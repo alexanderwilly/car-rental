@@ -48,16 +48,16 @@
                     <input type = "text" id = "phone" name = "phone" value = "+6589876543" placeholder="+Country Code XXXX XXXX ..." maxlength="36" disabled required>
                     <label for = "otp-phone">OTP *</label>
                     <div>
-                        <input type = "text" id = "otp-phone" name = "otp-phone" maxlength="6" required>
+                        <input type = "text" id = "otp-phone" name = "otp-phone" maxlength="6" disabled required>
                         <button type="button" class = "otp-btn" id ="send-otp-phone">Send OTP</button>
-                        <button type="button" class = "otp-btn" id ="verify-otp-phone" disabled>Verify OTP</button>
+                        <button type="button" class = "otp-btn" id ="verify-otp-phone">Verify OTP</button>
                     </div>
 
                     <span class = "guide-text" id = "update-phone-guide">
-                        Verify your phone number to update,<br/>send OTP to your phone number first!
+                        Verify your phone number to update!
                     </span>
 
-                    <button type="button" id ="save-phone">Save Changes</button>
+                    <button type="button" id ="save-phone" disabled>Save Changes</button>
                 </form>
 
                 <form method="POST">
@@ -66,16 +66,16 @@
                     <input type = "email" id = "email" name = "email" value = "customer1@gmail.com" maxlength="64" disabled required>
                     <label for = "otp-email">OTP *</label>
                     <div>
-                        <input type = "text" id = "otp-email" name = "otp-email" maxlength="6" required>
+                        <input type = "text" id = "otp-email" name = "otp-email" maxlength="6" disabled required>
                         <button type="button" class = "otp-btn" id ="send-otp-email">Send OTP</button>
-                        <button type="button" class = "otp-btn" id ="verify-otp-email" disabled>Verify OTP</button>
+                        <button type="button" class = "otp-btn" id ="verify-otp-email">Verify OTP</button>
                     </div>
 
                     <span class = "guide-text" id = "update-email-guide">
-                        Verify your email to update,<br/>send OTP to your email first!
+                        Verify your email to update!
                     </span>
 
-                    <button type="button" id ="save-email">Save Changes</button>
+                    <button type="button" id ="save-email" disabled>Save Changes</button>
 
 
                 </form>
@@ -83,35 +83,33 @@
                 <form method="POST">
                     <h3>Update Password</h3>
                     <label for = "password">Password *</label>
-                    <input type = "password" id = "password" name = "password" minlength="8" required>
+                    <input type = "password" id = "password" name = "password" minlength="8" disabled required>
                     <label for = "confirm-password">Confirm Password *</label>
-                    <input type = "password" id = "confirm-password" name = "confirm-password" minlength="8" required>
+                    <input type = "password" id = "confirm-password" name = "confirm-password" minlength="8" disabled required>
 
                     <label for = "otp-password">OTP *</label>
                     <div>
-                        <input type = "text" id = "otp-password" name = "otp-password" maxlength="6" required>
+                        <input type = "text" id = "otp-password" name = "otp-password" maxlength="6" disabled required>
                         <button type="button" class = "otp-btn" id ="send-otp-password">Send OTP</button>
-                        <button type="button" class = "otp-btn" id ="verify-otp-password" disabled>Verify OTP</button>
+                        <button type="button" class = "otp-btn" id ="verify-otp-password">Verify OTP</button>
                     </div>
 
                     <span class = "guide-text" id = "update-password-guide">
-                        Update your password here,<br/>
-                        verify OTP sent to your email first!
+                        Update your password here!
                     </span>
 
-                    <button type="button" id ="save-password">Save Changes</button>
+                    <button type="button" id ="save-password" disabled>Save Changes</button>
                 </form>
 
                 <form method="POST">
                     <h3>Update Driving License</h3>
                     <label for = "license">License Number *</label>
                     <input type = "text" id = "license" name = "license" value = "">
-                    <label for = "license-pic">Upload Driving License (only .jpg, .jpeg, and .png) *</label>
+                    <label for = "license-pic">Upload Driving License (only .jpg, .jpeg, and .png)</label>
                     <input type = "file" id = "license-pic" name = "license-pic" accept="image/*">
 
                     <span class = "guide-text" id = "update-license-guide">
-                        Update your driving license here, <br/>
-                        your license will be verified by our staff after you make a reservation.
+                        Update your driving license here!
                     </span>
 
                     <button type="button" id ="save-license">Save Changes</button>
@@ -119,12 +117,12 @@
 
                 <form method="POST">
                     <h3>Update Payment Information</h3>
-                    <label for = "Card Number">Card Number</label>
+                    <label for = "card-number">Card Number</label>
                     <input type = "text" id = "card-number" name = "card-number" value = "**** **** **** 9876" disabled>
-                    <label for = "expiry">Expiry Date</label>
+                    <label for = "expiry">Expiry Date *</label>
                     <input type = "month" id = "expiry" name = "expiry" value = "2026-01" required>
-                    <label for = "cvv">CVV/CVC</label>
-                    <input type = "password" id = "cvv" name = "cvv" value = "" maxlength="3" required>
+                    <label for = "cvv">CVV/CVC *</label>
+                    <input type = "password" id = "cvv" name = "cvv" value = "" maxlength="4" required>
 
                     <span class = "guide-text" id = "update-payment-guide">
                         Update your payment information here,<br/>
