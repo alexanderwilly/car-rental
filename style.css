@@ -371,10 +371,11 @@ section{
 }
 
 .questions.active img{
-    transform: rotate(-180deg);
+    transform: rotate(0deg);
 }
 
 .question > img{
+    transform: rotate(-90deg);
     transition: all 0.3s ease;
 }
 

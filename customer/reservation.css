@@ -1,0 +1,69 @@
+section > h1{
+    color: #c2272d;
+    font-size: 2rem;
+}
+
+.reservation-container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.reservation-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.reservation-card > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    background-color: white;
+    gap: 8px;
+    width: 85%;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.reservation-card > div > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 16px;
+}
+
+.reservation-card > div > div > span{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.reservation-card > button{
+    width: 15%;
+    text-align: center;
+    background-color: #c2272d;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+section > button{
+    background-color: #c2272d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    width: 256px;
+    align-self: center;
+}
+

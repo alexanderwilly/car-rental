@@ -1,0 +1,98 @@
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+#booking-main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    padding-top: 16px;
+}
+
+#booking-main h1{
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #c2272d;
+}
+
+#booking-main div{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#booking-main img{
+    width: 750px;
+}
+
+#booking-info-container{
+    width: 100%;
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+#booking-info-container h2{
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    font-weight: bold;
+    color: #c2272d;
+}
+
+
+#booking-info-container > div > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#booking-info-container > div > div > div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 50%;
+}
+
+#booking-info-container label{
+    font-size: 1.25em;
+    font-weight: 500;
+}
+
+#booking-info-container span > span{
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+#buttons-conatiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    width: 100%;
+}
+
+#buttons-conatiner button{
+    padding: 8px;
+    width: 200px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #c2272d;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+#buttons-conatiner button:nth-child(1){
+    background-color: black;
+    color: white;
+}
