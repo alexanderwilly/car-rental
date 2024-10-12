@@ -20,19 +20,19 @@
                 <form method="POST">
                     <h3>Update User Information</h3>
                     <label for = "fullname">Full Name *</label>
-                    <input type="text" id = "fullname" name = "fullname" value = "Jamie Lie" maxlength="64" required>
+                    <input type="text" id = "fullname" name = "fullname" value = "" maxlength="64" required>
                     <label for = "dob">Date of Birth *</label>
-                    <input type="date" id = "dob" name = "dob" value = "1990-01-01" required>
+                    <input type="date" id = "dob" name = "dob" value = "" required>
                     <label for = "address1">Address Line 1 *</label>
-                    <input type="text" id = "address1" name = "address1" maxlength="64" value = "123 Lorong Chuan" required>
+                    <input type="text" id = "address1" name = "address1" maxlength="64" value = "" required>
                     <label for = "address2">Address Line 2</label>
                     <input type="text" id = "address2" name = "address2" maxlength="64" value = "">
                     <label for = "city">City *</label>
-                    <input type="text" id = "city" name = "city" value = "Singapore" maxlength="64" required>
+                    <input type="text" id = "city" name = "city" value = "" maxlength="64" required>
                     <label for = "country">Country *</label>
-                    <input type="text" id = "country" name = "country" value = "Singapore" maxlength="64" required>
+                    <input type="text" id = "country" name = "country" value = "" maxlength="64" required>
                     <label for = "postal">Postal Code *</label>
-                    <input type="text" id = "postal" name = "postal" value = "123456" maxlength="6" required>
+                    <input type="text" id = "postal" name = "postal" value = "" maxlength="6" required>
 
                     <span class = "guide-text" id = "update-user-guide">
                         Update your information here!
@@ -118,9 +118,9 @@
                 <form method="POST">
                     <h3>Update Payment Information</h3>
                     <label for = "card-number">Card Number</label>
-                    <input type = "text" id = "card-number" name = "card-number" value = "**** **** **** 9876" disabled>
+                    <input type = "text" id = "card-number" name = "card-number" value = "" disabled>
                     <label for = "expiry">Expiry Date *</label>
-                    <input type = "month" id = "expiry" name = "expiry" value = "2026-01" required>
+                    <input type = "month" id = "expiry" name = "expiry" value = "" required>
                     <label for = "cvv">CVV/CVC *</label>
                     <input type = "password" id = "cvv" name = "cvv" value = "" maxlength="4" required>
 
@@ -135,6 +135,7 @@
             
         </main>
 
+        <script src = "../myClasses.js"></script>
         <script src="edit_account.js"></script>
     </body> 
 </html>

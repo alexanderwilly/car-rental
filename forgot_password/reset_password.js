@@ -28,6 +28,7 @@ function resetPassword(e) {
         return;
     }
 
+    error_msg.style.color = 'green';
     error_msg.innerHTML = 'Password reset successfully';
 
     // timeout

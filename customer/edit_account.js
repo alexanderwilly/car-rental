@@ -1,3 +1,34 @@
+const user = new Customer ("Jamie Lie",
+    "1990-01-01",
+    "123 Lorong Chuan,\nSingapore, Singapore 123456", 
+    "customer1@gmail.com", 
+    "+6589876543", 
+    "096a634ebef7363da45157c18a4afb7ed6c62a322f452a51d4d1cd834c4a437b", 
+    "VISA-9876",
+    "666F", true);
+
+// load data
+const fullname = document.getElementById('fullname');
+const dob = document.getElementById('dob');
+const address1 = document.getElementById('address1');
+const address2 = document.getElementById('address2');
+const city = document.getElementById('city');
+const country = document.getElementById('country');
+const postal = document.getElementById('postal');
+const phone = document.getElementById('phone');
+
+const card_number = document.getElementById('card-number');
+
+fullname.value = user.getFullName().trim();
+dob.value = user.getDob().trim();
+address1.value = user.getAddress().split(',\n')[0].trim();
+city.value = user.getAddress().split('\n')[1].split(',')[0].trim();
+country.value = user.getAddress().split('\n')[1].split(',')[1].trim().split(' ')[0].trim();
+postal.value = user.getAddress().split('\n')[1].split(',')[1].trim().split(' ')[1].trim();
+phone.value = user.getPhone().trim();
+
+card_number.value = `**** **** **** ${user.getCard().split('-')[1].trim()}`;
+
 // Back handler
 const back = document.getElementById('back-btn');
 back.addEventListener('click',(e)=>{
@@ -22,45 +53,37 @@ saveUserInfoBtn.addEventListener('click',(event)=>{
     const postalRegex = /^[0-9]{6}$/;
 
 
-    const address1 = document.getElementById('address1').value.trim();
-    const address2 = document.getElementById('address2').value.trim();
-    const city = document.getElementById('city').value.trim();
-    const country = document.getElementById('country').value.trim();
-    const postal = document.getElementById('postal').value.trim();
-
-    const fullname = document.getElementById('fullname').value.trim();
-    const dob = document.getElementById('dob').value.trim();
 
     const error_msg = document.getElementById('update-user-guide');
     error_msg.style.color = '#c2272d';
     
 
-    if (address1 === '' || city === '' || country === '' || postal === '' || fullname === '' || dob === '') {
+    if (address1.value.trim() === '' || city.value.trim() === '' || country.value.trim() === '' || postal.value.trim() === '' || fullname.value.trim() === '' || dob.value.trim() === '') {
         error_msg.innerHTML = 'Please fill in all fields';
         return;
     }
 
-    if (!nameRegex.test(fullname)) {
+    if (!nameRegex.test(fullname.value.trim())) {
         error_msg.innerHTML = 'Invalid name';
         return;
     }
 
-    if (!addressRegex.test(address1)) {
+    if (!addressRegex.test(address1.value.trim())) {
         error_msg.innerHTML = 'Invalid address';
         return;
     }
 
-    if (address2 !== '' && !addressRegex.test(address2)) {
+    if (address2.value.trim() !== '' && !addressRegex.test(address2.value.trim())) {
         error_msg.innerHTML = 'Invalid address';
         return;
     }
 
-    if (!cityCountryRegex.test(city) || !cityCountryRegex.test(country)) {
+    if (!cityCountryRegex.test(city.value.trim()) || !cityCountryRegex.test(country.value.trim())) {
         error_msg.innerHTML = 'Invalid city or country';
         return;
     }
 
-    if (postal.length !== 6 || !postalRegex.test(postal)) {
+    if (postal.value.trim().length !== 6 || !postalRegex.test(postal.value.trim())) {
         error_msg.innerHTML = 'Invalid postal code';
         return;
     }
@@ -81,16 +104,15 @@ sendOTPPhone.addEventListener('click', (event)=>{
     // Phone number regex with country code
     const phoneRegex = /^\+[0-9]{1,3}[0-9]{6,12}$/;
 
-    const phone = document.getElementById('phone').value.trim();
     const error_msg = document.getElementById('update-phone-guide');
     error_msg.style.color = '#c2272d';
 
-    if (phone === '') {
+    if (phone.value.trim() === '') {
         error_msg.innerHTML = 'Please enter your phone number';
         return;
     }
 
-    if (!phoneRegex.test(phone)) {
+    if (!phoneRegex.test(phone.value.trim())) {
         error_msg.innerHTML = 'Invalid phone number\nFormat: +[country code][phone number]';
         return;
     }
@@ -143,7 +165,6 @@ verifyOTPPhone.addEventListener('click', (event)=>{
     isOldVerified = true;
 
     // enable phone number field
-    const phone = document.getElementById('phone');
     phone.disabled = false;
 
     // enable send otp button
@@ -170,19 +191,18 @@ savePhoneBtn.addEventListener('click',(event)=>{
 
 
     // get phone number and otp
-    const phone = document.getElementById('phone').value.trim();
     const otp = document.getElementById('otp-phone').value.trim();
 
     const error_msg = document.getElementById('update-phone-guide');
 
     error_msg.style.color = '#c2272d';
 
-    if (phone === '' || otp === '') {
+    if (phone.value.trim() === '' || otp === '') {
         error_msg.innerHTML = 'Please fill in all fields';
         return;
     }
 
-    if (!phoneRegex.test(phone)) {
+    if (!phoneRegex.test(phone.value.trim())) {
         error_msg.innerHTML = 'Invalid phone number\nFormat: +[country code][phone number]';
         return;
     }
@@ -458,11 +478,13 @@ savePaymentBtn.addEventListener('click',(event)=>{
 
     // get cvv
     const cvv = document.getElementById('cvv').value.trim();
+    // get expiry
+    const expiry = document.getElementById('expiry').value.trim();
     const error_msg = document.getElementById('update-payment-guide');
 
     error_msg.style.color = '#c2272d';
 
-    if (cvv === '') {
+    if (cvv === '' || expiry === '') {
         error_msg.innerHTML = 'Please fill in all fields';
         return;
     }

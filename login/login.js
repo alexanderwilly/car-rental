@@ -1,58 +1,4 @@
 
-class User{
-    _fullName;
-    _dob;
-    _address;
-    _email;
-    _phone;
-    _password;
-    constructor(fullname, dob, address, email, phone, password){
-        this._fullName = fullname;
-        this._dob = dob;
-        this._address = address;
-        this._email = email;
-        this._phone = phone;
-        this._password = password;
-    }
-
-    getFullName(){return this._fullName;}
-    getDob(){return this._dob;}
-    getAddress(){return this._address;}
-    getEmail(){return this._email;}
-    getPhone(){return this._phone;}
-    getPassword(){return this._password;}
-
-    setFullName(fullname){this._fullName = fullname;}
-    setDob(dob){this._dob = dob;}
-    setAddress(address){this._address = address;}
-    setEmail(email){this._email = email;}
-    setPhone(phone){this._phone = phone;}
-    setPassword(password){this._password = password;}
-}
-
-class Staff extends User{}
-
-class Customer extends User{
-    __card;
-    __license;
-    __isValid;
-
-    constructor(fullname, dob, address, email, phone, password, card, license, isValid){
-        super(fullname, dob, address, email, phone, password);
-        this.__card = card;
-        this.__license = license;
-        this.__isValid = isValid;
-    }
-
-    getCard(){return this.__card;}
-    getLicense(){return this.__license;}
-    getIsValid(){return this.__isValid;}
-    
-    setCard(card){this.__card = card;}
-    setLicense(license){this.__license = license;}
-    setIsValid(isValid){this.__isValid = isValid;}
-}
-
 
 
 async function hashString(str) {
@@ -126,15 +72,17 @@ async function validateLogin(e){
 let users = [
     new Staff (
         "John Doe", 
+        "12/12/1995",
+        "64 Jalan Kaki Bukit,\nSingapore, Singapore 987654",
         "staff1@gmail.com", 
         "+65 8123 4567", 
         "2f005e42a17da46ec51ba6f11d725e60788931a1dadd33d9cb85084fb32bb166"),
     new Customer ("Jamie Lie",
-        "1990-01-01",
+        "01/01/1990",
         "123 Lorong Chuan,\nSingapore, Singapore 123456", 
         "customer1@gmail.com", 
         "+65 8987 6543", 
-        "2cbf58e520216e4ea5caa705a9b3667e371af90c9ad4637f6d90b1189ff5e138", 
+        "096a634ebef7363da45157c18a4afb7ed6c62a322f452a51d4d1cd834c4a437b", 
         "VISA-9876",
         "666F", true)
 ]

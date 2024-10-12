@@ -12,7 +12,7 @@ body{
     background: #f6f6f6;
 }
 
-header{
+nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,12 +23,24 @@ header{
     padding-right: 48px;
 }
 
-header > img{
+nav > div{
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+}
+
+nav > div > a {
+    text-decoration: none;
+    color: white;
+
+}
+
+nav > img{
     width: 100px;
     height: 100%;
 }
 
-header > button{
+nav > button{
     background-color: white;
     color: #c2272d;
     border: none;

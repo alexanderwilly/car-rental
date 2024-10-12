@@ -7,10 +7,13 @@ const otp_regex = /^[0-9]{6}$/;
 
 function verifyEmail(e) {
     e.preventDefault();
+    
 
     const email = document.getElementById('email').value.trim();
     const otp = document.getElementById('OTP').value.trim();
     const error_msg = document.getElementById('error-msg');
+    
+    error_msg.style.color = 'red';
 
     //  otp example
     // in real world, this will be generated randomly and sent to the user's email
@@ -58,6 +61,7 @@ function sendOTP(e){
     OTP.removeAttribute('disabled');
 
     // send otp to the user's email
+    error_msg.style.color = 'black';
     error_msg.innerHTML = 'OTP sent to your email';
 }
 
