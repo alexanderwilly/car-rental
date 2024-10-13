@@ -6,12 +6,12 @@
         <link rel="stylesheet" href="customer.css" />
         <link rel="stylesheet" href="reservation.css" />
         <link rel="icon" href="../img/az_icon.png" type="image/x-icon" />
-        <title>My Reservation | AZ Car Rental</title>
+        <title>My Reservation | AZoom Car Rental</title>
     </head>
 
     <body>
         <nav>
-            <img src="../img/az_icon.png" alt="AZ Car Rental" />
+            <img src="../img/az_icon.png" alt="AZoom Car Rental" />
             <div>
                 <a href = "reservation.html">1</a>
                 <a href = "reservation2.html">2</a>
@@ -45,29 +45,29 @@
                     
                     <div class = "reservation-card">
                         <div>
-                            <h3>Reservation ID: SGNE-01234567</h6>
+                            <h3>Reservation ID: <span id ="reservationId3"></span></h6>
 
                             <div>
                                 <span>
                                     <h5>Car:</h5>
-                                    <h6>Toyota Prius</h6>
+                                    <h6 id = "car3"></h6>
                                 </span>
                                 <span>
                                     <h5>Start Date:</h5>
-                                    <h6>15/10/2024</h6>
+                                    <h6 id = "startDate3"></h6>
                                 </span>
                                 <span>
                                     <h5>End Date:</h5>
-                                    <h6>20/10/2024</h6>
+                                    <h6 id = "endDate3"></h6>
                                 </span>
                                 <span>
                                     <h5>Status:</h5>
-                                    <h6>Renting</h6>
+                                    <h6 id = "status3">Renting</h6>
                                 </span>
                             </div>
 
                         </div>
-                        <button id = "view-reservation-btn">View</button>
+                        <button id = "view-reservation-btn-3">View</button>
                     </div>
                         
                 </div>
@@ -77,6 +77,7 @@
         </main>
         
 
+        <script src = "../myClasses.js" ></script>
         <script src="customer.js"></script>
         <script src="reservation.js"></script>
     </body>

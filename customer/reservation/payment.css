@@ -1,0 +1,123 @@
+
+main {
+    padding: 0;
+    padding-top:24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 85%;
+    margin: 0 auto;
+}
+
+header, section{
+    width: 100%;
+}
+
+header > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header h4{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+
+section{
+    padding:0;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+}
+
+section > div{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+section > div > span{
+    padding-bottom: 8px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-right: 0;
+    border-left: 0;
+    margin-top: 128px;
+}
+
+
+
+table h3{
+    font-size: 1.25rem;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+}
+
+table h6{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+table td{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: right;
+    width: 25%;
+}
+
+table td:first-child{
+    text-align: left;
+}
+
+
+
+table tr td:last-child{
+    text-align: right;
+    width: 20%;
+}
+
+
+table td span{
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 64px;
+}
+
+.buttons-container button{
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 0;
+    border-radius: 4px;
+    background-color: #c2272d;
+    color: white;
+    cursor: pointer;
+    width: 150px;
+}
+
+.buttons-container button:first-child{
+    background-color: black;
+}
+
+
+
