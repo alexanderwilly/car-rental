@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta viewport="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../customer.css" />
+        <link rel="stylesheet" href="view_reservation.css" />
+        <link rel="icon" href="../../img/az_icon.png" type="image/x-icon" />
+        <title>My Reservation Details | AZoom Car Rental</title>
+    </head>
+
+    <body>
+        <nav>
+            <img src="../../img/az_icon.png" alt="AZoom Car Rental" />
+        </nav>
+
+        <main>
+            <section id = "booking-main">
+                <h1>Reservation ID: <span id ="reservationId5b"></span></h1>
+                <div>
+                    <img id = "carImg5b" alt="carImg" />
+                </div>
+            </section>
+            <section id = "booking-info-container">
+                <div>
+                    <h2>Booking Information</h2>
+                    <div>
+                        <div>
+                            <span>
+                                <label>Start Date:</label> <br/>
+                                <span id = "startDate5b"></span>
+                            </span>
+
+                            <span>
+                                <label>End Date:</label> <br/>
+                                <span id = "endDate5b"></span>
+                            </span>
+
+                            <span>
+                                <label>Status:</label> <br/>
+                                <span id = "status5b"></span>
+                            </span>
+
+                            <span>
+                                <label>Payment Date:</label> <br/>
+                                <span id = "payment-date5b"></span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <label>Total Fee:</label> <br/>
+                                <span id = "estFee5b"></span>
+                            </span>
+                            <span>
+                                <label>Pick-up Location:</label> <br/>
+                                <span id = "pickupLocation5b"></span>
+                            </span>
+                            <span>
+                                <label>Return Location:</label> <br/>
+                                <span id = "returnLocation5b"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2>Car Information</h2>
+                    <div>
+                        <div>
+                            <span>
+                                <label>Car Name:</label> <br/>
+                                <span id = "carName5b"></span>
+                            </span>
+
+                            <span>
+                                <label>Car Type:</label> <br/>
+                                <span id = "carType5b"></span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <label>Boot Space:</label> <br/>
+                                <span id = "bootSpace5b"></span>
+                            </span>
+
+                            <span>
+                                <label>Seats:</label> <br/>
+                                <span id = "seats5b"></span>
+                            </span>
+                            <span>
+                                <label>Fuel Tank Capacity:</label> <br/>
+                                <span id = "fuelCap5b"></span>
+                            </span>
+
+                            <span>
+                                <label>Fuel consumption:</label> <br/>
+                                <span id = "fuelConsumption5b"></span>
+                            </span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id = "buttons-conatiner">
+                <button id="back-btn-5">Back</button>
+                <button id="receipt-btn-5b">View Receipt</button>
+            </section>
+            
+        </main>
+
+        <script src ='../../myClasses.js'></script>
+        <script src="view_reservation.js"></script>
+    </body>
+</html>

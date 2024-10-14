@@ -3,8 +3,7 @@ const reservation = new Reservation(
     "customer1@gmail.com", 
     "15 October 2024", 
     "20 October 2024", 
-    "Reserved", 
-    500.00, 
+    "Reserved",
     "AZ Car Rental - Sengkang Branch,<br/>28 Sengkang Square, Singapore 027028", 
     "AZ Car Rental - Sengkang Branch,<br/>28 Sengkang Square, Singapore 027028", 
     new Vehicle(
@@ -27,7 +26,7 @@ const new_reservation_btn = document.getElementById('new-reservation-btn');
 if (new_reservation_btn !== null){
     new_reservation_btn.addEventListener('click', (e) => {
         e.preventDefault();
-        window.location.href = './reservation/new_reservation1.html';
+        window.location.href = './reservation/new_reservation.html';
     });
 }
 

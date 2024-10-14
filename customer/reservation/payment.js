@@ -12,8 +12,7 @@ const reservation = new Reservation(
     "customer1@gmail.com", 
     "15 October 2024", 
     "20 October 2024", 
-    "Reserved", 
-    500.00, 
+    "Reserved",
     "AZoom Car Rental - Sengkang Branch,<br/>28 Sengkang Square, Singapore 027028", 
     "AZoom Car Rental - Sengkang Branch,<br/>28 Sengkang Square, Singapore 027028", 
     new Vehicle(
@@ -29,6 +28,10 @@ const reservation = new Reservation(
         100.00
     )
 );
+
+reservation.addAdditionalPayment("Scratch Found", '-', 1 ,50.00);
+reservation.addAdditionalPayment("Broken Side Mirror", '-', 1 ,100.00);
+reservation.addAdditionalPayment("Broken Headlight", '-', 1 ,150.00);
 
 const rental_address = document.getElementById('rental-address');
 const customer_name = document.getElementById('customer-name');
@@ -53,6 +56,68 @@ if(invoice_id && invoice_date && due_date){
 }
 
 
+
+const payment_breakdown = document.getElementById('payment-breakdown');
+if(payment_breakdown){
+    payment_breakdown.innerHTML = `
+    <tr>
+        <td>
+            <h3>Item</h3>
+        </td>
+        <td>
+            <h3>Quantity</h3>
+        </td>
+        <td>
+            <h3>Rate (SG$)</h3>
+        </td>
+        <td>
+            <h3>Amount (SG$)</h3>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h6>Car Rental Fee</h6>
+        </td>
+        <td>
+            <h6 id = "duration"></h6>
+            <span>day(s)</span>
+        </td>
+        <td>
+            <h6 id = "ratePerDay"></h6>
+            <span>per day</span>
+        </td>
+        <td>
+            <h6 id = "total"></h6>
+        </td>
+    </tr>
+    `;
+
+    reservation.getAdditionalPayment().forEach((payment, index) => {
+        const newRow = document.createElement('tr');
+        
+        const amount = payment.qty * payment.fee;
+        newRow.innerHTML = `
+            <td>${payment.remarks}</td>
+            <td>${payment.qty}</td>
+            <td>${payment.fee.toFixed(2)}</td>
+            <td>${amount.toFixed(2)}</td>
+        `;
+
+        payment_breakdown.appendChild(newRow);
+    });
+
+    payment_breakdown.innerHTML += `
+    <tr rowspan = "2">
+        <td colspan = "3">
+            <h3>Total Amount (include GST 9%)</h3>
+        </td>
+        <td>
+            <h3 id = 'total-amount'></h3>
+        </td>
+    </tr>   `;
+
+}
+
 const duration = document.getElementById('duration');
 const ratePerDay = document.getElementById('ratePerDay');
 const total = document.getElementById('total');
@@ -64,8 +129,8 @@ if(duration && ratePerDay && total){
     total.innerHTML = reservation.getEstFee().toFixed(2);
 }
 
-const total_amount = document.getElementById('total-amount');
 
+const total_amount = document.getElementById('total-amount');
 if(total_amount){
     
     total_amount.innerHTML = `SG$ ${reservation.getTotalAmount().toFixed(2)}`;

@@ -3,8 +3,7 @@ const reservation = new Reservation(
     "customer1@gmail.com", 
     "15 October 2024", 
     "20 October 2024", 
-    "Reserved", 
-    500.00, 
+    "Reserved",
     "AZ Car Rental - Sengkang Branch,<br/>28 Sengkang Square, Singapore 027028", 
     "AZ Car Rental - Sengkang Branch,<br/>28 Sengkang Square, Singapore 027028", 
     new Vehicle(
@@ -20,6 +19,10 @@ const reservation = new Reservation(
         100.00
     )
 );
+reservation.addAdditionalPayment("Scratch Found", '-', 1 ,50.00);
+reservation.addAdditionalPayment("Broken Side Mirror", '-', 1 ,100.00);
+reservation.addAdditionalPayment("Broken Headlight", '-', 1 ,150.00);
+
 
 
 const reservationId = document.getElementById('reservationId');
@@ -111,7 +114,7 @@ if (reservationId4 !== null){
     endDate4.innerHTML = reservation.getEndDate();
     reservation.setStatus("Pending Payment");
     stat4.innerHTML = reservation.getStatus();
-    estFee4.innerHTML = `SG$ ${reservation.getEstFee().toFixed(2)}`;
+    estFee4.innerHTML = `SG$ ${reservation.getTotalAmount().toFixed(2)}`;
     pickupLocation4.innerHTML = reservation.getPickupLocation();
     returnLocation4.innerHTML = reservation.getReturnLocation();
     carName4.innerHTML = `${reservation.getVehicle().getBrand()} ${reservation.getVehicle().getModel()}`;
@@ -124,6 +127,97 @@ if (reservationId4 !== null){
 
 }
 
+
+const reservationId5a = document.getElementById('reservationId5a');
+const carImg5a = document.getElementById('carImg5a');
+const startDate5a = document.getElementById('startDate5a');
+const endDate5a = document.getElementById('endDate5a');
+const stat5a = document.getElementById('status5a');
+const estFee5a = document.getElementById('estFee5a');
+const pickupLocation5a = document.getElementById('pickupLocation5a');
+const returnLocation5a = document.getElementById('returnLocation5a');
+const carName5a = document.getElementById('carName5a');
+const carType5a = document.getElementById('carType5a');
+const bootSpace5a = document.getElementById('bootSpace5a');
+const seats5a = document.getElementById('seats5a');
+const fuelCap5a = document.getElementById('fuelCap5a');
+const fuelConsumption5a = document.getElementById('fuelConsumption5a');
+const payment_date = document.getElementById('payment-date');
+
+if (reservationId5a !== null){
+    reservationId5a.innerHTML = reservation.getReservationId();
+    carImg5a.src = reservation.getVehicle().getImage();
+    startDate5a.innerHTML = reservation.getStartDate();
+    endDate5a.innerHTML = reservation.getEndDate();
+    reservation.setStatus("Completed");
+    stat5a.innerHTML = reservation.getStatus();
+    estFee5a.innerHTML = `SG$ ${reservation.getTotalAmount().toFixed(2)}`;
+    pickupLocation5a.innerHTML = reservation.getPickupLocation();
+    returnLocation5a.innerHTML = reservation.getReturnLocation();
+    carName5a.innerHTML = `${reservation.getVehicle().getBrand()} ${reservation.getVehicle().getModel()}`;
+    carType5a.innerHTML = reservation.getVehicle().getType();
+    bootSpace5a.innerHTML = reservation.getVehicle().getBootSpace();
+    seats5a.innerHTML = `${reservation.getVehicle().getSeats()} Seater`;
+    fuelCap5a.innerHTML = `${reservation.getVehicle().getFuelTankCapacity()} Litres`;
+    fuelConsumption5a.innerHTML = `${reservation.getVehicle().getFuelConsumption()} (L/100km)`;
+    payment_date.innerHTML = reservation.getPaymentDate();
+}
+
+const reservation5b = new Reservation(
+    "SGNO-87654321", 
+    "customer1@gmail.com", 
+    "15 June 2024", 
+    "20 July 2024", 
+    "Completed",
+    "AZ Car Rental - Sengkang Branch,<br/>28 Sengkang Square, Singapore 027028",
+    "AZ Car Rental - Woodlands Branch,<br/>21 Woodlands Drive 2, Singapore 020021", 
+    new Vehicle(
+        "HON-001", 
+        "../../img/cars/honda/city.png", 
+        "Honda", 
+        "City", 
+        "Standard", 
+        "1 large, 1 small luggage", 
+        5, 
+        40, 
+        5.6, 
+        100.00
+    )
+);
+
+const reservationId5b = document.getElementById('reservationId5b');
+const carImg5b = document.getElementById('carImg5b');
+const startDate5b = document.getElementById('startDate5b');
+const endDate5b = document.getElementById('endDate5b');
+const stat5b = document.getElementById('status5b');
+const estFee5b = document.getElementById('estFee5b');
+const pickupLocation5b = document.getElementById('pickupLocation5b');
+const returnLocation5b = document.getElementById('returnLocation5b');
+const carName5b = document.getElementById('carName5b');
+const carType5b = document.getElementById('carType5b');
+const bootSpace5b = document.getElementById('bootSpace5b');
+const seats5b = document.getElementById('seats5b');
+const fuelCap5b = document.getElementById('fuelCap5b');
+const fuelConsumption5b = document.getElementById('fuelConsumption5b');
+const payment_date5b = document.getElementById('payment-date5b');
+
+if (reservationId5b !== null){
+    reservationId5b.innerHTML = reservation5b.getReservationId();
+    carImg5b.src = reservation5b.getVehicle().getImage();
+    startDate5b.innerHTML = reservation5b.getStartDate();
+    endDate5b.innerHTML = reservation5b.getEndDate();
+    stat5b.innerHTML = reservation5b.getStatus();
+    estFee5b.innerHTML = `SG$ ${reservation5b.getTotalAmount().toFixed(2)}`;
+    pickupLocation5b.innerHTML = reservation5b.getPickupLocation();
+    returnLocation5b.innerHTML = reservation5b.getReturnLocation();
+    carName5b.innerHTML = `${reservation5b.getVehicle().getBrand()} ${reservation5b.getVehicle().getModel()}`;
+    carType5b.innerHTML = reservation5b.getVehicle().getType();
+    bootSpace5b.innerHTML = reservation5b.getVehicle().getBootSpace();
+    seats5b.innerHTML = `${reservation5b.getVehicle().getSeats()} Seater`;
+    fuelCap5b.innerHTML = `${reservation5b.getVehicle().getFuelTankCapacity()} Litres`;
+    fuelConsumption5b.innerHTML = `${reservation5b.getVehicle().getFuelConsumption()} (L/100km)`;
+    payment_date5b.innerHTML = reservation5b.getPaymentDate();
+}
 
 
 
@@ -150,6 +244,15 @@ if (back_btn_4){
     });
 }
 
+const back_btn_5 = document.getElementById('back-btn-5');
+if (back_btn_5){
+    back_btn_5.addEventListener('click', () => {
+        window.location.href = "../history.html"
+    });
+}
+
+
+
 const cancel_btn = document.getElementById('cancel-btn');
 if(cancel_btn){
     cancel_btn.addEventListener('click', () => {
@@ -161,5 +264,12 @@ const pay_btn = document.getElementById('pay-btn');
 if (pay_btn){
     pay_btn.addEventListener('click', () => {
         window.location.href = 'payment.html';
+    });
+}
+
+const receipt_btn_5a = document.getElementById('receipt-btn-5a');
+if (receipt_btn_5a){
+    receipt_btn_5a.addEventListener('click', () => {
+        window.location.href = 'receipt5a.html';
     });
 }

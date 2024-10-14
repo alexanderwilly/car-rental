@@ -89,7 +89,7 @@ let users = [
 
 
 // console.log(hashString('Staff123'));
-// console.log(hashString('Cust123'));
+// console.log(hashString('Cust1234'));
 
 
 let button = document.getElementById("submit-btn");

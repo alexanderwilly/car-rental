@@ -60,19 +60,17 @@ class Reservation{
     _startDate;
     _endDate;
     _status;
-    _estFee;
     _pickupLocation;
     _returnLocation;
     _vehicle;
     _additionalPayment = [];
 
-    constructor(reservationId, email, startDate, endDate, status, estFee, pickupLocation, returnLocation, vehicle){
+    constructor(reservationId, email, startDate, endDate, status, pickupLocation, returnLocation, vehicle){
         this._reservationId = reservationId;
         this._email = email;
         this._startDate = startDate;
         this._endDate = endDate;
         this._status = status;
-        this._estFee = estFee;
         this._pickupLocation = pickupLocation;
         this._returnLocation = returnLocation;
         this._vehicle = vehicle;
@@ -83,7 +81,6 @@ class Reservation{
     getStartDate(){return this._startDate;}
     getEndDate(){return this._endDate;}
     getStatus(){return this._status;}
-    getEstFee(){return this._estFee;}
     getPickupLocation(){return this._pickupLocation;}
     getReturnLocation(){return this._returnLocation;}
     getVehicle(){return this._vehicle;}
@@ -94,7 +91,6 @@ class Reservation{
     setStartDate(startDate){this._startDate = startDate;}
     setEndDate(endDate){this._endDate = endDate;}
     setStatus(status){this._status = status;}
-    setEstFee(estFee){this._estFee = estFee;}
     setPickupLocation(pickupLocation){this._pickupLocation = pickupLocation;}
     setReturnLocation(returnLocation){this._returnLocation = returnLocation;}
     setVehicle(vehicle){this._vehicle = vehicle;}
@@ -121,8 +117,14 @@ class Reservation{
         return `${endDate.getDate()} ${endDate.toLocaleString('default', { month: 'long' })} ${endDate.getFullYear()}`;
     }
 
-    addAdditionalPayment(remarks, image, fee){
-        this._additionalPayment.push({remarks: remarks, image:image, fee: fee});
+    getPaymentDate(){
+        const endDate = new Date(this._endDate);
+        endDate.setDate(endDate.getDate() + 3);
+        return `${endDate.getDate()} ${endDate.toLocaleString('default', { month: 'long' })} ${endDate.getFullYear()}`;
+    }
+
+    addAdditionalPayment(remarks, image, qty, fee){
+        this._additionalPayment.push({remarks: remarks, image:image, qty:qty, fee: fee});
     }   
 
     getTotalAmount(){

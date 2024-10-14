@@ -3,13 +3,13 @@ section > h1{
     font-size: 2rem;
 }
 
-.reservation-container{
+#reservation-container{
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.reservation-container > h4{
+#reservation-container > h4{
     color: black;
     font-size: 1rem;
     font-weight: 500;
