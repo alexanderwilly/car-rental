@@ -270,6 +270,13 @@ if (pay_btn){
 const receipt_btn_5a = document.getElementById('receipt-btn-5a');
 if (receipt_btn_5a){
     receipt_btn_5a.addEventListener('click', () => {
-        window.location.href = 'receipt5a.html';
+        window.location.href = 'receipt.html';
+    });
+}
+
+const receipt_btn_5b = document.getElementById('receipt-btn-5b');
+if (receipt_btn_5b){
+    receipt_btn_5b.addEventListener('click', () => {
+        window.location.href = 'receipt2.html';
     });
 }

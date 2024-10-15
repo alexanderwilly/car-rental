@@ -115,8 +115,12 @@ table td span{
     width: 150px;
 }
 
-.buttons-container button:first-child{
+#back-btn, #done-btn{
     background-color: black;
+}
+
+#done-btn, #receipt-btn{
+    display: none;
 }
 
 
