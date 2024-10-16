@@ -42,15 +42,15 @@
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    width: 280px;
-    height: 320px;
+    width: 275px;
+    height: 325px;
     margin-top: 16px;
     background-color: white;
 }
 
 .card img{
     width: 250px;
-    height: 135px;
+    height: 125px;
     align-self: center;
     object-fit: cover;
     border-radius: 8px;
