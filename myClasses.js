@@ -102,7 +102,7 @@ class Reservation{
         const endDate = new Date(this._endDate);
         const diffTime = Math.abs(endDate - startDate);
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        return diffDays;
+        return diffDays + 1;
     }
     getEstFee(){
         return this.duration() * this._vehicle.getDailyRate();

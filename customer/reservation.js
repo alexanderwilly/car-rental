@@ -1,8 +1,8 @@
 const reservation = new Reservation(
     "SGNE-01234567", 
     "customer1@gmail.com", 
-    "15 October 2024", 
-    "20 October 2024", 
+    new Date("15 December 2024 09:00"), 
+    new Date("20 December 2024 09:00"),
     "Reserved",
     "AZ Car Rental - Sengkang Branch,<br/>28 Sengkang Square, Singapore 027028", 
     "AZ Car Rental - Sengkang Branch,<br/>28 Sengkang Square, Singapore 027028", 
@@ -41,8 +41,8 @@ const stat = document.getElementById('status');
 if( reservationId !== null){
     reservationId.innerHTML = reservation.getReservationId();
     car.innerHTML = `${reservation.getVehicle().getBrand()} ${reservation.getVehicle().getModel()}`;
-    startDate.innerHTML = reservation.getStartDate();
-    endDate.innerHTML = reservation.getEndDate();
+    startDate.innerHTML = new Date(reservation.getStartDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
+    endDate.innerHTML = new Date(reservation.getEndDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
     stat.innerHTML = reservation.getStatus();
 }
 
@@ -65,8 +65,8 @@ const stat3 = document.getElementById('status3');
 if (reservationId3 !== null){
     reservationId3.innerHTML = reservation.getReservationId();
     car3.innerHTML = `${reservation.getVehicle().getBrand()} ${reservation.getVehicle().getModel()}`;
-    startDate3.innerHTML = reservation.getStartDate();
-    endDate3.innerHTML = reservation.getEndDate();
+    startDate3.innerHTML = new Date(reservation.getStartDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
+    endDate3.innerHTML = new Date(reservation.getEndDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
     reservation.setStatus("Renting In-Progress");
     stat3.innerHTML = reservation.getStatus();
 }
@@ -90,8 +90,8 @@ const stat4 = document.getElementById('status4');
 if (reservationId4 !== null){
     reservationId4.innerHTML = reservation.getReservationId();
     car4.innerHTML = `${reservation.getVehicle().getBrand()} ${reservation.getVehicle().getModel()}`;
-    startDate4.innerHTML = reservation.getStartDate();
-    endDate4.innerHTML = reservation.getEndDate();
+    startDate4.innerHTML = new Date(reservation.getStartDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
+    endDate4.innerHTML = new Date(reservation.getEndDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
     reservation.setStatus("Pending Payment");
     stat4.innerHTML = reservation.getStatus();
 }

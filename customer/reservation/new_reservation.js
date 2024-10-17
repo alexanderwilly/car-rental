@@ -31,7 +31,8 @@ function createCarCard(car_obj) {
     select_btn.classList.add('btn', 'btn-primary');
     select_btn.innerText = 'Select Car';
     select_btn.addEventListener('click', () => {
-        alert('Car selected: ' + car_obj.getBrand() + ' ' + car_obj.getModel());
+        localStorage.setItem('car', JSON.stringify(car_obj));
+        window.location.href = 'new_reservation2.html';
     });
 
     card.appendChild(select_btn);

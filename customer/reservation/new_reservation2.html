@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta viewport="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../customer.css" />
+        <link rel="stylesheet" href="view_reservation.css" />
+        <link rel="stylesheet" href="new_reservation2.css" />
+        <link rel="icon" href="../../img/az_icon.png" type="image/x-icon" />
+        <title>My Reservation Details | AZoom Car Rental</title>
+    </head>
+
+    <body>
+        <nav>
+            <img src="../../img/az_icon.png" alt="AZoom Car Rental" />
+        </nav>
+
+        <main>
+            <section id = "booking-main">
+                <div>
+                    <img id = "carImg" alt="carImg" />
+                </div>
+            </section>
+            <section id = "booking-info-container">
+                <div>
+                    <h2>Booking Information</h2>
+                    <div>
+                        <div>
+                            <span>
+                                <label for = "pick-up-location">Pick-up Location</label> <br/>
+                                <select name = "pick-up-location" id ="pick-up-location">
+                                    <option value = "north">Woodlands Branch Carpark</option>
+                                    <option value = "central">Kallang Branch Carpark</option>
+                                    <option value = "west">Jurong East Branch Carpark</option>
+                                    <option value = "north-east">Sengkang Branch Carpark</option>
+                                    <option value = "east">Bedok Branch Carpark</option>
+                                </select> 
+                            </span>
+                            <span>
+                                <label for = "return-location">Return Location</label> <br/>
+                                <select name = "return-location" id ="return-location">
+                                    <option value = "north">Woodlands Branch Carpark</option>
+                                    <option value = "central">Kallang Branch Carpark</option>
+                                    <option value = "west">Jurong East Branch Carpark</option>
+                                    <option value = "north-east">Sengkang Branch Carpark</option>
+                                    <option value = "east">Bedok Branch Carpark</option>
+                                </select>
+                            </span>
+
+                            <span>
+                                <input type="checkbox" id="isSameLocation" name="isSameLocation" value = "false">
+                                <label for="isSameLocation">Same Drop-off Location</label><br>
+                            </span>
+                            
+
+                        </div>
+                        <div>
+                            <span>
+                                <label>Start Date:</label> <br/>
+                                <span id = "startDate"></span>
+                                <input type = "datetime-local" id = "startDateInput" />
+                            </span>
+
+                            <span>
+                                <label>End Date:</label> <br/>
+                                <span id = "endDate"></span>
+                                <input type = "datetime-local" id = "endDateInput" />
+                            </span>
+                            
+                            <span>
+                                <label>Est. Fee:</label> <br/>
+                                <span id = "estFee">SG$ -</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2>Car Information</h2>
+                    <div>
+                        <div>
+                            <span>
+                                <label>Car Name:</label> <br/>
+                                <span id = "carName"></span>
+                            </span>
+
+                            <span>
+                                <label>Car Type:</label> <br/>
+                                <span id = "carType"></span>
+                            </span>
+
+                            <span>
+                                <label>Rate per Day:</label> <br/>
+                                <span id = "ratePerDay"></span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <label>Boot Space:</label> <br/>
+                                <span id = "bootSpace"></span>
+                            </span>
+
+                            <span>
+                                <label>Seats:</label> <br/>
+                                <span id = "seats"></span>
+                            </span>
+                            <span>
+                                <label>Fuel Tank Capacity:</label> <br/>
+                                <span id = "fuelCap"></span>
+                            </span>
+
+                            <span>
+                                <label>Fuel consumption:</label> <br/>
+                                <span id = "fuelConsumption"></span>
+                            </span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span id = "error-msg"></span>
+                </div>
+            </section>
+            <section id = "buttons-conatiner">
+                <button id="back-btn">Back</button>
+                <button id="confirm-btn">Confirm Booking</button>
+            </section>
+            
+        </main>
+
+        <script src ='../../myClasses.js'></script>
+        <script src="new_reservation2.js"></script>
+    </body>
+</html>

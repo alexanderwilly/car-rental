@@ -1,0 +1,25 @@
+select {
+    width: 256px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+input[type = "datetime-local"] {
+    width: 256px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+#booking-info-container > div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#error-msg{
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+}

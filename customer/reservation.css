@@ -38,6 +38,7 @@ section > h1{
     display: flex;
     flex-direction: row;
     margin-bottom: 16px;
+    gap: 8px;
 }
 
 .reservation-card > div > div > span{

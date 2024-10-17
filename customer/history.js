@@ -1,8 +1,8 @@
 const reservation1 = new Reservation(
     "SGNE-01234567", 
-    "customer1@gmail.com", 
-    "15 October 2024", 
-    "20 October 2024", 
+    "customer1@gmail.com",
+    new Date("15 December 2024 09:00"),
+    new Date("20 December 2024 09:00"),
     "Payment Successful", 
     "AZ Car Rental - Sengkang Branch,<br/>28 Sengkang Square, Singapore 027028", 
     "AZ Car Rental - Sengkang Branch,<br/>28 Sengkang Square, Singapore 027028", 
@@ -57,11 +57,11 @@ reservations.forEach(reservation => {
                 </span>
                 <span>
                     <h5>Start Date:</h5>
-                    <h6 id = "startDate">${reservation.getStartDate()}</h6>
+                    <h6 id = "startDate">${new Date(reservation.getStartDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'})}</h6>
                 </span>
                 <span>
                     <h5>End Date:</h5>
-                    <h6 id = "endDate">${reservation.getEndDate()}</h6>
+                    <h6 id = "endDate">${new Date(reservation.getEndDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'})}</h6>
                 </span>
             </div>
         </div>

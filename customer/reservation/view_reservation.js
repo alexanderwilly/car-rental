@@ -1,8 +1,8 @@
 const reservation = new Reservation(
     "SGNE-01234567", 
-    "customer1@gmail.com", 
-    "15 October 2024", 
-    "20 October 2024", 
+    "customer1@gmail.com",
+    new Date("15 December 2024 09:00"),
+    new Date("20 December 2024 09:00"),
     "Reserved",
     "AZ Car Rental - Sengkang Branch,<br/>28 Sengkang Square, Singapore 027028", 
     "AZ Car Rental - Sengkang Branch,<br/>28 Sengkang Square, Singapore 027028", 
@@ -44,8 +44,8 @@ const fuelConsumption = document.getElementById('fuelConsumption');
 if (reservationId !== null){
     reservationId.innerHTML = reservation.getReservationId();
     carImg.src = reservation.getVehicle().getImage();
-    startDate.innerHTML = reservation.getStartDate();
-    endDate.innerHTML = reservation.getEndDate();
+    startDate.innerHTML = new Date(reservation.getStartDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});;
+    endDate.innerHTML = new Date(reservation.getEndDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});;
     stat.innerHTML = reservation.getStatus();
     estFee.innerHTML = `SG$ ${reservation.getEstFee().toFixed(2)}`;
     pickupLocation.innerHTML = reservation.getPickupLocation();
@@ -76,8 +76,8 @@ const fuelConsumption3 = document.getElementById('fuelConsumption3');
 if (reservationId3 !== null){
     reservationId3.innerHTML = reservation.getReservationId();
     carImg3.src = reservation.getVehicle().getImage();
-    startDate3.innerHTML = reservation.getStartDate();
-    endDate3.innerHTML = reservation.getEndDate();
+    startDate3.innerHTML = new Date(reservation.getStartDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
+    endDate3.innerHTML = new Date(reservation.getEndDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
     reservation.setStatus("Renting In-Progress");
     stat3.innerHTML = reservation.getStatus();
     estFee3.innerHTML = `SG$ ${reservation.getEstFee().toFixed(2)}`;
@@ -110,8 +110,8 @@ const paymentDueDate = document.getElementById('payment-due-date');
 if (reservationId4 !== null){
     reservationId4.innerHTML = reservation.getReservationId();
     carImg4.src = reservation.getVehicle().getImage();
-    startDate4.innerHTML = reservation.getStartDate();
-    endDate4.innerHTML = reservation.getEndDate();
+    startDate4.innerHTML = new Date(reservation.getStartDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
+    endDate4.innerHTML = new Date(reservation.getEndDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
     reservation.setStatus("Pending Payment");
     stat4.innerHTML = reservation.getStatus();
     estFee4.innerHTML = `SG$ ${reservation.getTotalAmount().toFixed(2)}`;
@@ -147,8 +147,8 @@ const payment_date = document.getElementById('payment-date');
 if (reservationId5a !== null){
     reservationId5a.innerHTML = reservation.getReservationId();
     carImg5a.src = reservation.getVehicle().getImage();
-    startDate5a.innerHTML = reservation.getStartDate();
-    endDate5a.innerHTML = reservation.getEndDate();
+    startDate5a.innerHTML = new Date(reservation.getStartDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
+    endDate5a.innerHTML = new Date(reservation.getEndDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
     reservation.setStatus("Completed");
     stat5a.innerHTML = reservation.getStatus();
     estFee5a.innerHTML = `SG$ ${reservation.getTotalAmount().toFixed(2)}`;
@@ -160,14 +160,14 @@ if (reservationId5a !== null){
     seats5a.innerHTML = `${reservation.getVehicle().getSeats()} Seater`;
     fuelCap5a.innerHTML = `${reservation.getVehicle().getFuelTankCapacity()} Litres`;
     fuelConsumption5a.innerHTML = `${reservation.getVehicle().getFuelConsumption()} (L/100km)`;
-    payment_date.innerHTML = reservation.getPaymentDate();
+    payment_date.innerHTML = new Date(reservation.getPaymentDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
 }
 
 const reservation5b = new Reservation(
     "SGNO-87654321", 
-    "customer1@gmail.com", 
-    "15 June 2024", 
-    "20 July 2024", 
+    "customer1@gmail.com",
+    new Date("15 June 2024 09:00"),
+    new Date("20 July 2024 09:00"),
     "Completed",
     "AZ Car Rental - Sengkang Branch,<br/>28 Sengkang Square, Singapore 027028",
     "AZ Car Rental - Woodlands Branch,<br/>21 Woodlands Drive 2, Singapore 020021", 
@@ -204,8 +204,8 @@ const payment_date5b = document.getElementById('payment-date5b');
 if (reservationId5b !== null){
     reservationId5b.innerHTML = reservation5b.getReservationId();
     carImg5b.src = reservation5b.getVehicle().getImage();
-    startDate5b.innerHTML = reservation5b.getStartDate();
-    endDate5b.innerHTML = reservation5b.getEndDate();
+    startDate5b.innerHTML = new Date(reservation5b.getStartDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
+    endDate5b.innerHTML = new Date(reservation5b.getEndDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
     stat5b.innerHTML = reservation5b.getStatus();
     estFee5b.innerHTML = `SG$ ${reservation5b.getTotalAmount().toFixed(2)}`;
     pickupLocation5b.innerHTML = reservation5b.getPickupLocation();
@@ -216,7 +216,7 @@ if (reservationId5b !== null){
     seats5b.innerHTML = `${reservation5b.getVehicle().getSeats()} Seater`;
     fuelCap5b.innerHTML = `${reservation5b.getVehicle().getFuelTankCapacity()} Litres`;
     fuelConsumption5b.innerHTML = `${reservation5b.getVehicle().getFuelConsumption()} (L/100km)`;
-    payment_date5b.innerHTML = reservation5b.getPaymentDate();
+    payment_date5b.innerHTML = new Date(reservation5b.getPaymentDate()).toLocaleString('en-SG', {day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'});
 }
 
 

@@ -1,0 +1,12 @@
+.reservation-card > div > div{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.reservation-card > div > div > span{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 33%;
+}
