@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+body{
+    background: #f6f6f6;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background-color: #c2272d;
+    color: white;
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+nav > div{
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+}
+
+nav > div > a {
+    text-decoration: none;
+    color: white;
+
+}
+
+nav > img{
+    width: 100px;
+    height: 100%;
+}
+
+nav > button{
+    background-color: white;
+    color: #c2272d;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 64px;
+}
+
+aside{
+    width: 256px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+aside > button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+    background-color: white;
+    border: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor:pointer;
+}
+
+aside > button:hover{
+    background-color: #f6f6f6;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+aside > button > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+aside > button > span{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+section{
+    width: 640px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}   
+
+section > h1{
+    font-size: 32px;
+    font-weight: bold;
+    color: #c2272d;
+}

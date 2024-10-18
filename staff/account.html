@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta viewport="width=device-width, initial-scale=1.0" />
+    <link rel = "stylesheet" href = "staff.css" />
+    <link rel = "stylesheet" href = "account.css" />
+    <link rel="icon" href="../img/az_icon.png" type="image/x-icon" />
+    <title>Staff Home | AZoom Car Rental</title>
+  </head>
+
+  <body>
+    <nav>
+      <img src="../img/az_icon.png" alt="AZ Car Rental" />
+      <button id="logout-btn">Logout</button>
+    </nav>
+
+    <main>
+
+        <aside>
+          <button id = "aside-btn-account">
+            <img src="../img/account_icon.png" alt="acc_icon" />
+            <span>Account</span>
+          </button>
+          <button id = "aside-btn-reservation">
+            <img src="../img/reservation_icon.png" alt="book_icon" />
+            <span>Reservation</span>
+          </button>
+          <button id = "aside-btn-return">
+            <img src="../img/booking_icon.png" alt="hist_icon" />
+            <span>Car Return</span>
+          </button>
+        </aside>
+
+
+        <section>
+          <div class = 'account-header'>
+            <div>
+              <img src="../img/default_user.png" alt="user_icon" />
+              <div>
+                <h1 id = "name"></h1>
+                <h6 id = "email"></h6>
+                <h6 id = "phone"></h6>
+              </div>
+            </div>
+          </div>
+
+
+          <div class = "account-details">
+            <h2>Account Information</h2>
+            <table>
+              <tr>
+                <td>
+                  <h6>Date of Birth</h6>
+                  <span id = 'dob'></span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h6>Address</h6>
+                  <span id = "address"></span>
+                </td>
+              </tr>
+
+            </table>
+          </div>
+        </section>
+    </main>
+
+    
+    <script src="../myClasses.js"></script>
+    <script src="account.js"></script>
+    <script src="staff.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta viewport="width=device-width, initial-scale=1.0" />
+    <link rel = "stylesheet" href = "staff.css" />
+    <link rel = "stylesheet" href = "reservation.css" />
+    <link rel="icon" href="../img/az_icon.png" type="image/x-icon" />
+    <title>Staff Home | AZoom Car Rental</title>
+  </head>
+
+  <body>
+    <nav>
+      <img src="../img/az_icon.png" alt="AZ Car Rental" />
+      <button id="logout-btn">Logout</button>
+    </nav>
+
+    <main>
+
+        <aside>
+          <button id = "aside-btn-account">
+            <img src="../img/account_icon.png" alt="acc_icon" />
+            <span>Account</span>
+          </button>
+          <button id = "aside-btn-reservation">
+            <img src="../img/reservation_icon.png" alt="book_icon" />
+            <span>Reservation</span>
+          </button>
+          <button id = "aside-btn-return">
+            <img src="../img/booking_icon.png" alt="hist_icon" />
+            <span>Car Return</span>
+          </button>
+        </aside>
+
+
+        <section>
+          <h1>Customer Car Return</h1>
+          <div class = "date-select-container">
+            <img src = "../img/arrow_down_icon.png" alt = "arrow_left_icon" id = "arrow-left" />
+            <input type = "date" id = "select-date" />
+            <img src = "../img/arrow_down_icon.png" alt = "arrow_right_icon" id = "arrow-right" />
+          </div>
+          <div class = "search-container">
+            <input type="text" id="search-bar" placeholder="Search by Reservation ID or Email ..." />
+            <img src = "../img/search_icon.png" alt = "search_icon" id = "search_icon" />
+          </div>
+          <div class = 'reservations'>
+            
+          </div>
+        </section>
+          
+    </main>
+
+    
+    <script src="../myClasses.js"></script>
+    <script src="staff.js"></script>
+    <script src="car_return.js"></script>
+  </body>
+</html>

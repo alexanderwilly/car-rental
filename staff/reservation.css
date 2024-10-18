@@ -1,0 +1,50 @@
+
+
+#arrow-left{
+    transform: rotate(90deg);
+    cursor: pointer;
+    width: 25px;
+}
+
+#arrow-right{
+    transform: rotate(-90deg);
+    cursor: pointer;
+    width: 25px;
+}
+
+.date-select-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+#select-date{
+    width: 200px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#search-bar{
+    width: 200px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    width: 75%;
+}
+
+#search_icon{
+    width: 25px;
+    cursor: pointer;
+}
