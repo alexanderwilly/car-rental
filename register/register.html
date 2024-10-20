@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="../img/az_icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="register.css">
+        <title>Register</title>
+    </head>
+    <body>
+        <header>
+            <button id = "back-button">Back</button>
+            
+        </header>
+        <section class = "registration-form">
+            <h1>Register</h1>
+            <form method = "POST">
+                <label for = "fullName">Full Name *</label>
+                <input type = "text" id = "fullName" name = "fullName" maxlength="64" placeholder="" required>
+                <label for = "dob">Date of Birth *</label>
+                <input type = "date" id = "dob" name = "dob" required>
+                <label for = "address1">Address Line 1 *</label>
+                <input type = "text" id = "address1" name = "address1" maxlength="64" required>
+                <label for = "address2">Address Line 2</label>
+                <input type = "text" id = "address2" name = "address2" maxlength="64">
+                <label for = "city">City *</label>
+                <input type = "text" id = "city" name = "city" maxlength="64" required>
+                <label for = "country">Country *</label>
+                <input type = "text" id = "country" name = "country" maxlength="64" required>
+                <label for = "postalCode">Postal Code *</label>
+                <input type = "text" id = "postalCode" name = "postalCode" maxlength="10" required>
+                <label for = "email">Email *</label>
+                <input type = "email" id = "email" name = "email" maxlength="64" required>
+                <label for = "phone">Phone *</label>
+                <input type = "tel" id = "phone" name = "phone" maxlength="16" placeholder="[+country_code]xxxxxxxx..." required>
+                <label for = "password">Password *</label>
+                <input type = "password" id = "password" name = "password" required>
+                <label for = "confirmPassword">Confirm Password *</label>
+                <input type = "password" id = "confirmPassword" name = "confirmPassword" required>
+                <label for = "card">Credit Card Number *</label>
+                <input type = "text" id = "card" name = "card" maxlength="16" required>
+                <label for = "expiry">Expiry Date *</label>
+                <input type = "date" id = "expiry" name = "expiry" required>
+                <label for = "cvv">CVV/CVC *</label>
+                <input type = "password" id = "cvv" name = "cvv" maxlength="4" required>
+                <label for = "license">License Number *</label>
+                <input type = "text" id = "license" name = "license" maxlength="36" required>
+
+                <div class = "terms">
+                    <input type = "checkbox" id = "terms" name = "terms" required>
+                    <label for = "terms">I agree to the terms and conditions</label>
+                </div>
+                <div class = "terms">
+                    <input type="checkbox" id = "consent" name = "consent" required>
+                    <label for = "consent">I consent to the processing of my personal data</label>
+                </div>
+
+                <span id = "error-message"></span>
+
+
+
+                <button id = "register-button">Register</button>
+            </form>
+        </section>
+        <script src="register.js"></script>
+    </body>
+</html>

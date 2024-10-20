@@ -47,7 +47,7 @@ async function validateLogin(e){
         if (u.getEmail() === email){
             if (u.getPassword() === await hashString(password)){
                 if (u instanceof Staff){
-                    window.location.href = "../staff/account.html";
+                    window.location.href = "../staff/reservation.html";
                 } else if (u instanceof Customer){
                     window.location.href = "../customer/reservation.html";
                 }
