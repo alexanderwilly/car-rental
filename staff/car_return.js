@@ -99,3 +99,10 @@ arrow_right.addEventListener('click', () => {
 
 
 loadReservations(date, search_input.value);
+
+const view_reservation_btn = document.getElementById('view-reservation-btn-SGNE-01234567');
+view_reservation_btn.addEventListener('click',(event)=>{
+    event.preventDefault();
+    localStorage.setItem("status", "Renting In-Progress");
+    window.location.href = "reservation/reservation_details.html";
+});

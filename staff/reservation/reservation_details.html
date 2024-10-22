@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta viewport="width=device-width, initial-scale=1.0" /> 
+        <link rel="stylesheet" href="reservation_details.css" />
+        <link rel="icon" href="../../img/az_icon.png" type="image/x-icon" />
+        <title>Car Return | AZoom Car Rental</title>
+    </head>
+
+    <body>
+        <nav>
+            <img src="../../img/az_icon.png" alt="AZoom Car Rental" />
+        </nav>
+
+        <main>
+            <section id = "booking-main">
+                <h1>Reservation ID: <span id ="reservationId"></span></h1>
+                <div>
+                    <img id = "carImg" alt="carImg" />
+                </div>
+            </section>
+            <section id = "booking-info-container">
+                <div>
+                    <h2>Booking Information</h2>
+                    <div>
+                        <div>
+                            <span>
+                                <label>Start Date:</label> <br/>
+                                <span id = "startDate"></span>
+                            </span>
+
+                            <span>
+                                <label>End Date:</label> <br/>
+                                <span id = "endDate"></span>
+                            </span>
+
+                            <span>
+                                <label>Status:</label> <br/>
+                                <span id = "status"></span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <label>Est. Fee:</label> <br/>
+                                <span id = "estFee"></span>
+                            </span>
+                            <span>
+                                <label>Pick-up Location:</label> <br/>
+                                <span id = "pickupLocation"></span>
+                            </span>
+                            <span>
+                                <label>Return Location:</label> <br/>
+                                <span id = "returnLocation"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <section id = "customer-info-container">
+                    <h2>Customer Information</h2>
+                    <div>
+                        <span>
+                            <label>Customer Name:</label>
+                            <span id = "customerName"></span>
+                        </span>
+
+                        <span>
+                            <label>Customer Email:</label>
+                            <span id = "customerEmail"></span>
+                        </span>
+                    
+                        <span>
+                            <label>Customer Phone:</label>
+                            <span id = "customerPhone"></span>
+                        </span>
+                    </div>
+                </section>
+                <div>
+                    <h2>Car Information</h2>
+                    <div>
+                        <div>
+                            <span>
+                                <label>Car Name:</label> <br/>
+                                <span id = "carName"></span>
+                            </span>
+
+                            <span>
+                                <label>Car Type:</label> <br/>
+                                <span id = "carType"></span>
+                            </span>
+                        </div>
+                        <div>
+                            <span>
+                                <label>Boot Space:</label> <br/>
+                                <span id = "bootSpace"></span>
+                            </span>
+
+                            <span>
+                                <label>Seats:</label> <br/>
+                                <span id = "seats"></span>
+                            </span>
+                            <span>
+                                <label>Fuel Tank Capacity:</label> <br/>
+                                <span id = "fuelCap"></span>
+                            </span>
+
+                            <span>
+                                <label>Fuel consumption:</label> <br/>
+                                <span id = "fuelConsumption"></span>
+                            </span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id = "checklist-container">
+                <h2>Checklist</h2>
+                <form>
+                    <h6>Exterior Inspection</h6>
+                    <div class = "inspection">
+                        
+                        <input type="checkbox" id="body-condition" name="body-condition" value="body-condition">
+                        <label for="body-condition">Body Condition (paint, scratches, dents)</label> <br/>
+                        <input type ="file" id = "body-condition-img" name = "body-condition-img" accept = "image/*"> <br/>
+
+                        <input type="checkbox" id="headlights" name="headlights" value="headlights">
+                        <label for="headlights">Headlights</label> <br/>
+                        <input type ="file" id = "headlights-img" name = "headlights-img" accept = "image/*"> <br/>
+
+                        <input type="checkbox" id="taillights" name="taillights" value="taillights">
+                        <label for="taillights">Taillights</label> <br/>
+                        <input type ="file" id = "taillights-img" name = "taillights-img" accept = "image/*"> <br/>
+
+                        <input type="checkbox" id="turn-signals" name="turn-signals" value="turn-signals">
+                        <label for="turn-signals">Turn Signals</label> <br/>
+                        <input type ="file" id = "turn-signals-img" name = "turn-signals-img" accept = "image/*"> <br/>
+
+                        <input type="checkbox" id="brake-lights" name="brake-lights" value="brake-lights">
+                        <label for="brake-lights">Brake Lights</label> <br/>
+                        <input type ="file" id = "brake-lights-img" name = "brake-lights-img" accept = "image/*"> <br/>
+
+                        <input type="checkbox" id="tires" name="tires" value="tires">
+                        <label for="tires">Tires</label> <br/>
+                        <input type ="file" id = "tires-img" name = "tires-img" accept = "image/*"> <br/>
+
+                        <input type="checkbox" id="wheels" name="wheels" value="wheels">
+                        <label for="wheels">Wheels</label> <br/>
+                        <input type ="file" id = "wheels-img" name = "wheels-img" accept = "image/*"> <br/>
+
+                        <input type="checkbox" id="mirrors" name="mirrors" value="mirrors">
+                        <label for="mirrors">Mirrors</label> <br/>
+                        <input type ="file" id = "mirrors-img" name = "mirrors-img" accept = "image/*"> <br/>
+
+                        <input type="checkbox" id="windows" name="windows" value="windows">
+                        <label for="windows">Windows</label> <br/>
+                        <input type ="file" id = "windows-img" name = "windows-img" accept = "image/*"> <br/>
+
+                        <input type="checkbox" id="windshield" name="windshield" value="windshield">
+                        <label for="windshield">Windshield</label> <br/>
+                        <input type ="file" id = "windshield-img" name = "windshield-img" accept = "image/*"> <br/>
+
+                        <input type="checkbox" id="wipers" name="wipers" value="wipers">
+                        <label for="wipers">Wipers</label> <br/> 
+                        <input type ="file" id = "wipers-img" name = "wipers-img" accept = "image/*"> <br/><br/>
+
+                    </div>
+
+                    <h6>Interior Inspection</h6>
+                    <div class = "inspection">
+
+                        <input type="checkbox" id="seatsCondition" name="seatsCondition" value="seatsCondition">
+                        <label for="seatsCondition">Seats</label> <br/>
+                        <input type ="file" id = "seatsCondition-img" name = "seatsCondition-img" accept = "image/*"> <br/>
+
+                        <input type="checkbox" id="seat-belts" name="seat-belts" value="seat-belts">
+                        <label for="seat-belts">Seat Belts</label> <br/>
+                        <input type ="file" id = "seat-belts-img" name = "seat-belts-img" accept = "image/*"> <br/>
+
+                        <input type="checkbox" id="radio" name="radio" value="radio">
+                        <label for="radio">Radio</label> <br/>
+                        <input type ="file" id = "radio-img" name = "radio-img" accept = "image/*"> <br/>
+
+                        <input type="checkbox" id="air-conditioning" name="air-conditioning" value="air-conditioning">
+                        <label for="air-conditioning">Air Conditioning</label> <br/>
+                        <input type ="file" id = "air-conditioning-img" name = "air-conditioning-img" accept = "image/*"> <br/>
+
+                        <input type="checkbox" id="heater" name="heater" value="heater">
+                        <label for="heater">Heater</label> <br/>
+                        <input type ="file" id = "heater-img" name = "heater-img" accept = "image/*"> <br/>
+
+                        <input type = "checkbox" id = "dashboard" name = "dashboard" value = "dashboard">
+                        <label for = "dashboard">Dashboard</label> <br/>
+                        <input type ="file" id = "dashboard-img" name = "dashboard-img" accept = "image/*"> <br/>
+
+                        <input type = "checkbox" id = "horn" name = "horn" value = "horn">
+                        <label for = "horn">Horn</label> <br/>
+                        <input type ="file" id = "horn-img" name = "horn-img" accept = "image/*"> <br/>
+
+                        <input type = "checkbox" id = "doors" name = "doors" value = "doors">
+                        <label for = "doors">Doors</label> <br/>
+                        <input type ="file" id = "doors-img" name = "doors-img" accept = "image/*"> <br/> <br/>
+
+                    </div>
+
+                    <h6>Functionality Check</h6>
+                    <div id = "inspection">
+                        <input type = "checkbox" id = "engine" name = "engine" value = "engine">
+                        <label for = "engine">Engine</label> <br/>
+                        <input type ="file" id = "engine-img" name = "engine-img" accept = "image/*"> <br/>
+
+                        <input type = "checkbox" id = "brakes" name = "brakes" value = "brakes">
+                        <label for = "brakes">Brakes</label> <br/>
+                        <input type ="file" id = "brakes-img" name = "brakes-img" accept = "image/*"> <br/>
+
+                        <input type = "checkbox" id = "steering" name = "steering" value = "steering">
+                        <label for = "steering">Steering</label> <br/>
+                        <input type ="file" id = "steering-img" name = "steering-img" accept = "image/*"> <br/>
+
+                        <input type = "checkbox" id = "fuel" name = "fuel" value = "fuel">
+                        <label for = "fuel">Full Fuel</label> <br/> 
+                        <input type ="file" id = "fuel-img" name = "fuel-img" accept = "image/*"> <br/><br/>
+
+                    </div>
+                    
+                    <h6>Confirmation and Agreement</h6>
+                    <div id = "inspection-agreement">
+                        
+                    </div>
+
+                    <h6>Additional Remarks</h6>
+                    <div id = "inspection">
+                        <textarea id = "remarks" name = "remarks" rows = "4" cols = "50"></textarea>
+                    </div>
+
+
+                </form>
+            </section>
+            <section id = "error-container">
+                <span id = "error-msg"></span>
+            </section>  
+            <section id = "buttons-conatiner">
+                <button id="back-btn">Back</button>
+                <button id="submit-btn">Submit</button>
+            </section>
+            
+        </main>
+
+        <script src ='../../myClasses.js'></script>
+        <script src="reservation_details.js"></script>
+    </body>
+</html>

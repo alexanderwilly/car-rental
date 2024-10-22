@@ -49,8 +49,6 @@ const cvvRegex = /^[0-9]{3,4}$/;
 // License regex ( alphanumeric characters)
 const licenseRegex = /^[a-zA-Z0-9]+$/;
 
-
-
 const register_button = document.getElementById('register-button');
 register_button.addEventListener('click', (event) => {
     event.preventDefault();
@@ -93,7 +91,7 @@ register_button.addEventListener('click', (event) => {
     }
 
     if (!phoneRegex.test(phone.value)) {
-        error_message.innerHTML = 'Invalid Phone Number';
+        error_message.innerHTML = 'Invalid Phone Number. Format: [+country_code]123456789...';
         return;
     }
 
