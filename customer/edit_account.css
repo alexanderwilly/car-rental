@@ -29,8 +29,8 @@ header > img{
 }
 
 header > button{
-    background-color: white;
-    color: #c2272d;
+    background-color: black;
+    color: white;
     border: none;
     padding: 8px 16px;
     border-radius: 4px;

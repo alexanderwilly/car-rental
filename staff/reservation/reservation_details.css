@@ -142,6 +142,11 @@ main{
     font-weight: 500;
 
 }
+
+#checklist-container input[type ="file"]{
+    margin-bottom: 12px;
+    margin-top:4px;
+}
 #error-container{
     width: 100%;
     display: flex;
