@@ -181,9 +181,7 @@ if(submit_btn){
             reservation.setStatus("Renting In-Progress");
             error_msg.innerHTML = "Successfully updated the reservation status to 'Renting In-Progress'.<br/>Redirecting to reservation page...";
 
-        }
-        
-        if ( reservation.getStatus() === "Renting In-Progress"){
+        }else if ( reservation.getStatus() === "Renting In-Progress"){
             // In-Progress
             if(body_condition_img.files.length === 0 || headlights_img.files.length === 0 || taillights_img.files.length === 0 || turn_signals_img.files.length === 0 || brake_lights_img.files.length === 0 || tires_img.files.length === 0 || wheels_img.files.length === 0 || mirrors_img.files.length === 0 || windows_img.files.length === 0 || windshield_img.files.length === 0 || wipers_img.files.length === 0 || seatsCondition_img.files.length === 0 || seat_belts_img.files.length === 0 || radio_img.files.length === 0 || air_conditioning_img.files.length === 0 || heater_img.files.length === 0 || dashboard_img.files.length === 0 || horn_img.files.length === 0 || doors_img.files.length === 0 || engine_img.files.length === 0 || brakes_img.files.length === 0 || steering_img.files.length === 0 || fuel_img.files.length === 0){
                 error_msg.style.color = "red";
