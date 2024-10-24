@@ -204,8 +204,8 @@ section{
     width: 75%;
 }
 
-.about-us h1{
-    font-size: 3rem;
+.about-us h2{
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: #c2272d;
@@ -320,8 +320,8 @@ section{
     align-items: center;
 }
 
-.faq h1{
-    font-size: 3rem;
+.faq h2{
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: #c2272d;
@@ -399,8 +399,8 @@ section{
     margin-top: 10vh;
 }
 
-.our-location h1{
-    font-size: 3rem;
+.our-location h2{
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: #c2272d;
@@ -451,8 +451,8 @@ section{
     padding-bottom: 8vh;
 }
 
-.contact h1{
-    font-size: 3rem;
+.contact h2{
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: #c2272d;
