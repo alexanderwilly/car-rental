@@ -229,7 +229,7 @@ const cars = [
     ),
     new Vehicle(
         "MBZ-001",
-        "../../img/cars/mercedes/c180.png",
+        "../../img/cars/mercedes/C180.png",
         "Mercedes",
         "C180",
         "Premium",
