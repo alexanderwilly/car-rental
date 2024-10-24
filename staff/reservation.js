@@ -86,6 +86,12 @@ arrow_left.addEventListener('click', () => {
     select_date.value = date.toISOString().split('T')[0];
 
     loadReservations(date, search_input.value);
+    const view_reservation_btn = document.getElementById('view-reservation-btn-SGNE-01234567');
+    view_reservation_btn.addEventListener('click',(event)=>{
+        event.preventDefault();
+        localStorage.setItem('status', 'Reserved');
+        window.location.href = "reservation/reservation_details.html";
+    });
 });
 
 // add event listener to arrow_right
@@ -94,6 +100,12 @@ arrow_right.addEventListener('click', () => {
     select_date.value = date.toISOString().split('T')[0];
 
     loadReservations(date, search_input.value);
+    const view_reservation_btn = document.getElementById('view-reservation-btn-SGNE-01234567');
+    view_reservation_btn.addEventListener('click',(event)=>{
+        event.preventDefault();
+        localStorage.setItem('status', 'Reserved');
+        window.location.href = "reservation/reservation_details.html";
+    });
 });
 
 
